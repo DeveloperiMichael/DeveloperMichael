@@ -15,6 +15,8 @@
 		AB730C2B1E7A8C6C00D42FD9 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB730C2A1E7A8C6C00D42FD9 /* AnimationViewController.m */; };
 		AB730C2E1E7A8FA800D42FD9 /* CABasicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB730C2D1E7A8FA800D42FD9 /* CABasicAnimationViewController.m */; };
 		AB730C311E7A8FD300D42FD9 /* CABasicAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB730C301E7A8FD300D42FD9 /* CABasicAnimationView.m */; };
+		AB73AAAD1E84F6FE00685A52 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AB73AAAC1E84F6FE00685A52 /* DateUtil.m */; };
+		AB73AAB01E85146900685A52 /* DMImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB73AAAF1E85146900685A52 /* DMImageBrowserViewController.m */; };
 		AB823AC81E8360C200B8E3ED /* PHAsset+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AB823AC71E8360C200B8E3ED /* PHAsset+Extension.m */; };
 		AB823ACB1E836AAD00B8E3ED /* DMPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB823ACA1E836AAD00B8E3ED /* DMPhotoBrowser.m */; };
 		AB966A781E824F060028D91D /* SystemPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB966A771E824F060028D91D /* SystemPhotoManager.m */; };
@@ -117,6 +119,10 @@
 		AB730C2D1E7A8FA800D42FD9 /* CABasicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CABasicAnimationViewController.m; sourceTree = "<group>"; };
 		AB730C2F1E7A8FD300D42FD9 /* CABasicAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABasicAnimationView.h; sourceTree = "<group>"; };
 		AB730C301E7A8FD300D42FD9 /* CABasicAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CABasicAnimationView.m; sourceTree = "<group>"; };
+		AB73AAAB1E84F6FE00685A52 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		AB73AAAC1E84F6FE00685A52 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		AB73AAAE1E85146900685A52 /* DMImageBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImageBrowserViewController.h; sourceTree = "<group>"; };
+		AB73AAAF1E85146900685A52 /* DMImageBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImageBrowserViewController.m; sourceTree = "<group>"; };
 		AB823AC61E8360C200B8E3ED /* PHAsset+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+Extension.h"; sourceTree = "<group>"; };
 		AB823AC71E8360C200B8E3ED /* PHAsset+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+Extension.m"; sourceTree = "<group>"; };
 		AB823AC91E836AAD00B8E3ED /* DMPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPhotoBrowser.h; sourceTree = "<group>"; };
@@ -887,6 +893,8 @@
 				B249EF4F1E6A6745000FF15B /* pinyin.h */,
 				B249EF481E6A5553000FF15B /* StringUtil.h */,
 				B249EF491E6A5553000FF15B /* StringUtil.m */,
+				AB73AAAB1E84F6FE00685A52 /* DateUtil.h */,
+				AB73AAAC1E84F6FE00685A52 /* DateUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -991,6 +999,8 @@
 				AB696EB01E7FC72D008E1041 /* DMImagePickerViewController.m */,
 				AB823AC91E836AAD00B8E3ED /* DMPhotoBrowser.h */,
 				AB823ACA1E836AAD00B8E3ED /* DMPhotoBrowser.m */,
+				AB73AAAE1E85146900685A52 /* DMImageBrowserViewController.h */,
+				AB73AAAF1E85146900685A52 /* DMImageBrowserViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1145,6 +1155,7 @@
 				B249EF0C1E6A54F8000FF15B /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				B249EF331E6A54F9000FF15B /* SDImageCache.m in Sources */,
 				B21322A61E684165000E73CD /* BaseViewController.m in Sources */,
+				AB73AAAD1E84F6FE00685A52 /* DateUtil.m in Sources */,
 				B249EF311E6A54F9000FF15B /* MKAnnotationView+WebCache.m in Sources */,
 				B249EF501E6A6745000FF15B /* pinyin.c in Sources */,
 				B2603C571E6FA26000CE572A /* HomeViewController.m in Sources */,
@@ -1181,6 +1192,7 @@
 				B249EF381E6A54F9000FF15B /* SDWebImageManager.m in Sources */,
 				AB966A871E82754A0028D91D /* MBProgressHUD.m in Sources */,
 				B2603C441E6EDFFC00CE572A /* ImageAnimationViewController.m in Sources */,
+				AB73AAB01E85146900685A52 /* DMImageBrowserViewController.m in Sources */,
 				B2603C3F1E6EB3EB00CE572A /* AdvertiseViewController.m in Sources */,
 				B21322A41E684165000E73CD /* AppDelegateViewController.m in Sources */,
 				B2603C581E6FA26000CE572A /* MessageViewController.m in Sources */,
