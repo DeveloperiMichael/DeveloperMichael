@@ -26,11 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupSubviewsContraints];
-    [[TimerManagerObject shareTimerManagerInstance] scheduledCountDownWithKey:@"123" timeInterval:60 countingDown:^(NSTimeInterval leftTimeInterval) {
-        NSLog(@"leftTimeInterval");
-    } finished:^(NSTimeInterval finalTimeInterval) {
-        NSLog(@"finalTimeInterval ");
-    }];
+    
 }
 
 
