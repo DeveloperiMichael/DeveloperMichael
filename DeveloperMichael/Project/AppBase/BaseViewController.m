@@ -41,16 +41,6 @@
     self.modalPresentationCapturesStatusBarAppearance=NO;
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    //隐藏系统导航栏
-    self.navigationController.navigationBarHidden = YES;
-    //如果不是tabBar上的controller隐藏tabBar
-    if ([self isKindOfClass:[DailyLifeViewController class]]||[self isKindOfClass:[OrderViewController class]]||[self isKindOfClass:[HomeViewController class]]||[self isKindOfClass:[MessageViewController class]]||[self isKindOfClass:[PrivateViewController class]]) {
-        self.tabBarController.tabBar.hidden=NO;
-    }else{
-        self.tabBarController.tabBar.hidden=YES;
-    }
-
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -60,6 +50,13 @@
                                              selector:@selector(userDidTakeScreenshot:)
                                                  name:UIApplicationUserDidTakeScreenshotNotification
                                                object:nil];
+    
+    //如果不是tabBar上的controller隐藏tabBar
+    if ([self isKindOfClass:[DailyLifeViewController class]]||[self isKindOfClass:[OrderViewController class]]||[self isKindOfClass:[HomeViewController class]]||[self isKindOfClass:[MessageViewController class]]||[self isKindOfClass:[PrivateViewController class]]) {
+        self.tabBarController.tabBar.hidden=NO;
+    }else{
+        self.tabBarController.tabBar.hidden=YES;
+    }
 }
 
 #pragma mark-
@@ -111,7 +108,7 @@
 
 
 - (void)dealloc {
-    NSLog(@"--dealloc--< 类 %@ 已释放 >",NSStringFromClass([self class]));
+    NSLog(@"--dealloc--<类 /** %@ **/ 已释放>",NSStringFromClass([self class]));
 }
 
 

@@ -13,6 +13,8 @@
 #import "ImageModel.h"
 #import "SystemPhotoManager.h"
 #import "DateUtil.h"
+#import "DMImageBrowserViewController.h"
+
 @interface DMImagePickerViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,BaseViewDelegate>
 
 {
@@ -96,7 +98,10 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    DMImageBrowserViewController *vc = [[DMImageBrowserViewController alloc] init];
+    vc.imageAssetArray = self.allAssetArray;
+    vc.currentIndex = indexPath.row;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
@@ -105,11 +110,11 @@
 #pragma mark- Event response
 
 - (void)leftButtonClicked:(BaseView *)view {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)rightButtonClicked:(BaseView *)view {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)cellSelectButtonPressed:(UIButton *)button {
@@ -158,7 +163,7 @@
     if (self.finishSelectBlock) {
         self.finishSelectBlock(_selectAssetArray);
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark-

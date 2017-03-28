@@ -103,6 +103,7 @@
 #pragma mark- SetupConstraints
 
 - (void)setupSubviewsContraints{
+    self.titleLabel.text = @"Photo Select";
     [self.rightButton setTitle:@"Cancel" forState:UIControlStateNormal];
     [self addSubview:self.bottomView];
     [self.bottomView addSubview:self.previewButton];

@@ -17,6 +17,8 @@
 		AB730C311E7A8FD300D42FD9 /* CABasicAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB730C301E7A8FD300D42FD9 /* CABasicAnimationView.m */; };
 		AB73AAAD1E84F6FE00685A52 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AB73AAAC1E84F6FE00685A52 /* DateUtil.m */; };
 		AB73AAB01E85146900685A52 /* DMImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB73AAAF1E85146900685A52 /* DMImageBrowserViewController.m */; };
+		AB7E69841E88A17700B6F77E /* DMImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7E69831E88A17700B6F77E /* DMImageBrowserView.m */; };
+		AB7E69871E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7E69861E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m */; };
 		AB823AC81E8360C200B8E3ED /* PHAsset+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AB823AC71E8360C200B8E3ED /* PHAsset+Extension.m */; };
 		AB823ACB1E836AAD00B8E3ED /* DMPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB823ACA1E836AAD00B8E3ED /* DMPhotoBrowser.m */; };
 		AB966A781E824F060028D91D /* SystemPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB966A771E824F060028D91D /* SystemPhotoManager.m */; };
@@ -123,6 +125,10 @@
 		AB73AAAC1E84F6FE00685A52 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		AB73AAAE1E85146900685A52 /* DMImageBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImageBrowserViewController.h; sourceTree = "<group>"; };
 		AB73AAAF1E85146900685A52 /* DMImageBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImageBrowserViewController.m; sourceTree = "<group>"; };
+		AB7E69821E88A17700B6F77E /* DMImageBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImageBrowserView.h; sourceTree = "<group>"; };
+		AB7E69831E88A17700B6F77E /* DMImageBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImageBrowserView.m; sourceTree = "<group>"; };
+		AB7E69851E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImageBroswerCollectionViewCell.h; sourceTree = "<group>"; };
+		AB7E69861E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImageBroswerCollectionViewCell.m; sourceTree = "<group>"; };
 		AB823AC61E8360C200B8E3ED /* PHAsset+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+Extension.h"; sourceTree = "<group>"; };
 		AB823AC71E8360C200B8E3ED /* PHAsset+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+Extension.m"; sourceTree = "<group>"; };
 		AB823AC91E836AAD00B8E3ED /* DMPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPhotoBrowser.h; sourceTree = "<group>"; };
@@ -1034,6 +1040,10 @@
 				B247FDFE1E73CA7E00E5AD2B /* PublishImageCollectionViewCell.m */,
 				AB696EB21E7FC82D008E1041 /* DMImagePickerView.h */,
 				AB696EB31E7FC82D008E1041 /* DMImagePickerView.m */,
+				AB7E69821E88A17700B6F77E /* DMImageBrowserView.h */,
+				AB7E69831E88A17700B6F77E /* DMImageBrowserView.m */,
+				AB7E69851E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.h */,
+				AB7E69861E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1154,6 +1164,7 @@
 				B249EF361E6A54F9000FF15B /* SDWebImageDownloader.m in Sources */,
 				B249EF0C1E6A54F8000FF15B /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				B249EF331E6A54F9000FF15B /* SDImageCache.m in Sources */,
+				AB7E69871E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m in Sources */,
 				B21322A61E684165000E73CD /* BaseViewController.m in Sources */,
 				AB73AAAD1E84F6FE00685A52 /* DateUtil.m in Sources */,
 				B249EF311E6A54F9000FF15B /* MKAnnotationView+WebCache.m in Sources */,
@@ -1168,6 +1179,7 @@
 				B2603C5A1E6FA26000CE572A /* PrivateViewController.m in Sources */,
 				B249EF4D1E6A5D26000FF15B /* UIImage+SAUImageHandle.m in Sources */,
 				AB966A781E824F060028D91D /* SystemPhotoManager.m in Sources */,
+				AB7E69841E88A17700B6F77E /* DMImageBrowserView.m in Sources */,
 				B2088FBD1E5BDAB7003F9514 /* AppDelegate.m in Sources */,
 				B249EF031E6A54F8000FF15B /* IQUIView+Hierarchy.m in Sources */,
 				B2603C561E6FA26000CE572A /* DailyLifeViewController.m in Sources */,

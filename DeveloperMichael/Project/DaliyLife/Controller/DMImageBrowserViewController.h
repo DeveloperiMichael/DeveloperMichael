@@ -10,4 +10,8 @@
 
 @interface DMImageBrowserViewController : UIViewController
 
+@property (nonatomic, strong) NSArray *imageAssetArray;
+
+@property (nonatomic, assign) NSInteger currentIndex;
+
 @end

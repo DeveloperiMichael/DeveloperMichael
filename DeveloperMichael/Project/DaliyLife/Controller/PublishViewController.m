@@ -42,11 +42,11 @@
 #pragma mark- Response
 
 - (void)leftButtonClicked:(BaseView *)view {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)rightButtonClicked:(BaseView *)view {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark-
@@ -103,7 +103,7 @@
             vc.finishSelectBlock =^(NSArray *selectArray){
                 NSLog(@"---%li---",(unsigned long)selectArray.count);
             };
-            [self presentViewController:vc animated:YES completion:nil];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         default:

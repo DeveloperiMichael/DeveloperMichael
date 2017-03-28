@@ -11,14 +11,14 @@
 /* 照片选择回调 */
 typedef void(^finishBlock)(NSArray *selectArray);
 
-@interface DMImagePickerViewController : UINavigationController
+@interface DMImagePickerViewController : UIViewController
 
 /* 一行几格 */
 @property (nonatomic, assign) NSInteger gridCount;
 
 @property (nonatomic, copy) finishBlock finishSelectBlock;
 
-/* 可选照片数量 default is 9*/
+/* 可选照片数量 default is 9 */
 @property (nonatomic, assign) NSInteger maxSelectCount;
 
 @end

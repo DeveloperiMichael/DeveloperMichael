@@ -151,6 +151,7 @@
 - (void)setupSubviewsContraints{
     [self addSubview:self.contentTextView];
     [self addSubview:self.characterLabel];
+    self.translatesAutoresizingMaskIntoConstraints = NO;
     [_contentTextView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(self);
         make.bottom.mas_equalTo(self).mas_offset(-kScreenHeightRatio(20));

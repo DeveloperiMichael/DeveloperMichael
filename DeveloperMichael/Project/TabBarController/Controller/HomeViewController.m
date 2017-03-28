@@ -112,7 +112,7 @@
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [[NSMutableArray alloc] initWithObjects:@"核心动画",@"核心动画",@"核心动画",@"核心动画",@"核心动画",@"核心动画", nil];
+        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType", nil];
     }
     return _titleArray;
 }
