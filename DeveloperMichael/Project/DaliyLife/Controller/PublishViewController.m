@@ -11,6 +11,7 @@
 #import "PublishView.h"
 #import "DMImagePickerViewController.h"
 #import <objc/runtime.h>
+#import "SystemPhotoManager.h"
 
 @interface PublishViewController ()<BaseViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIActionSheetDelegate>
 
@@ -71,9 +72,21 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PublishImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collection" forIndexPath:indexPath];
-    cell.publishImageView.image = _imageArray[indexPath.row];
-    if (indexPath.row == _imageArray.count-1) {
+    
+    if (_imageArray.count == 1) {
+        cell.publishImageView.image=_imageArray[0];
         cell.selectButton.hidden = YES;
+    }else{
+        if (indexPath.row == _imageArray.count-1) {
+            cell.publishImageView.image=_imageArray[_imageArray.count-1];
+            cell.selectButton.hidden = YES;
+        }else{
+            PHAsset *asset = _imageArray[indexPath.row];
+            [self getImageWithAsset:asset completion:^(UIImage *image) {
+                cell.publishImageView.image=image;
+                cell.selectButton.hidden = NO;
+            }];
+        }
     }
     return cell;
 }
@@ -101,7 +114,11 @@
             //photograph album
             DMImagePickerViewController *vc = [[DMImagePickerViewController alloc] init];
             vc.finishSelectBlock =^(NSArray *selectArray){
-                NSLog(@"---%li---",(unsigned long)selectArray.count);
+                [self.imageArray removeLastObject];
+                [self.imageArray addObjectsFromArray:selectArray];
+                UIImage *image = [UIImage imageNamed:@"icon_add"];
+                [self.imageArray addObject:image];
+                [_publishView.collectionView reloadData];
             };
             [self.navigationController pushViewController:vc animated:YES];
         }
@@ -145,6 +162,24 @@
     // 5.modal出这个控制器
     [self presentViewController:ipc animated:YES completion:nil];
 }
+
+//从这个回调中获取所图片
+- (void)getImageWithAsset:(PHAsset *)asset completion:(void (^)(UIImage *image))completion
+{
+    CGSize size = [self getSizeWithAsset:asset];
+    [[SystemPhotoManager shareSystemPhotoManagerInstance] requestImageForAsset:asset size:size resizeMode:PHImageRequestOptionsResizeModeFast completion:completion];
+}
+//获取图片及图片尺寸的相关方法
+- (CGSize)getSizeWithAsset:(PHAsset *)asset
+{
+    CGFloat width  = (CGFloat)asset.pixelWidth;
+    CGFloat height = (CGFloat)asset.pixelHeight;
+    CGFloat scale = width/height;
+    return CGSizeMake(_publishView.collectionView.view_width*scale, _publishView.collectionView.view_width*scale);
+    
+}
+
+
 
 
 #pragma mark-

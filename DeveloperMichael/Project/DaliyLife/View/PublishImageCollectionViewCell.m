@@ -72,7 +72,7 @@
         _selectButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_selectButton setImage:[UIImage imageNamed:@"icon_delete"] forState:UIControlStateNormal];
         _selectButton.backgroundColor = [UIColor redColor];
-        _selectButton.imageEdgeInsets = UIEdgeInsetsMake(-5, 5, 5, -5);
+        _selectButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     }
     return _selectButton;
 }
