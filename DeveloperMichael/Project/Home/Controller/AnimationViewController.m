@@ -8,6 +8,7 @@
 
 #import "AnimationViewController.h"
 #import "CABasicAnimationViewController.h"
+#import "CALayerProgressViewController.h"
 #import "HomeView.h"
 @interface AnimationViewController ()<UITableViewDataSource,UITableViewDelegate,BaseViewDelegate>
 
@@ -70,8 +71,6 @@
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.text = _titleArray[indexPath.row];
     cell.textLabel.textColor = [UIColor whiteColor];
-    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -81,8 +80,55 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    CABasicAnimationViewController *vc = [[CABasicAnimationViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    BaseViewController *vc;
+    
+    switch (indexPath.row) {
+        case 0:
+        {
+            vc = [[CABasicAnimationViewController alloc] init];
+            
+        }
+            break;
+        case 1:
+        {
+            
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            
+        }
+            break;
+        case 4:
+        {
+            
+        }
+            break;
+        case 5:
+        {
+            vc = [[CALayerProgressViewController alloc] init];
+        }
+            break;
+        case 6:
+        {
+            
+        }
+            break;
+        default:
+            break;
+    }
+    
+    if (vc) {
+        vc.navigationBarTitle = _titleArray[indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
 }
 
 #pragma mark-
@@ -118,7 +164,7 @@
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [[NSMutableArray alloc] initWithObjects:@"CABasicAnimation",@"CAKeyframeAnimation",@"CATransition",@"CAAnimationGroup",@"CASpringAnimation", nil];
+        _titleArray = [[NSMutableArray alloc] initWithObjects:@"CABasicAnimation",@"CAKeyframeAnimation",@"CATransition",@"CAAnimationGroup",@"CASpringAnimation",@"ProgressAnimation", nil];
     }
     return _titleArray;
 }

@@ -21,6 +21,9 @@
 		AB7E69871E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7E69861E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m */; };
 		AB823AC81E8360C200B8E3ED /* PHAsset+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AB823AC71E8360C200B8E3ED /* PHAsset+Extension.m */; };
 		AB823ACB1E836AAD00B8E3ED /* DMPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB823ACA1E836AAD00B8E3ED /* DMPhotoBrowser.m */; };
+		AB8FE4311E8F4460008438BB /* CALayerProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FE4301E8F4460008438BB /* CALayerProgressViewController.m */; };
+		AB8FE4341E8F4490008438BB /* CALayerProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FE4331E8F4490008438BB /* CALayerProgressView.m */; };
+		AB8FE4371E8F7176008438BB /* LoadProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FE4361E8F7176008438BB /* LoadProgressView.m */; };
 		AB966A781E824F060028D91D /* SystemPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB966A771E824F060028D91D /* SystemPhotoManager.m */; };
 		AB966A851E82754A0028D91D /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = AB966A811E82754A0028D91D /* MBProgressHUD+Add.m */; };
 		AB966A861E82754A0028D91D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AB966A821E82754A0028D91D /* MBProgressHUD.bundle */; };
@@ -133,6 +136,12 @@
 		AB823AC71E8360C200B8E3ED /* PHAsset+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+Extension.m"; sourceTree = "<group>"; };
 		AB823AC91E836AAD00B8E3ED /* DMPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPhotoBrowser.h; sourceTree = "<group>"; };
 		AB823ACA1E836AAD00B8E3ED /* DMPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPhotoBrowser.m; sourceTree = "<group>"; };
+		AB8FE42F1E8F4460008438BB /* CALayerProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerProgressViewController.h; sourceTree = "<group>"; };
+		AB8FE4301E8F4460008438BB /* CALayerProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerProgressViewController.m; sourceTree = "<group>"; };
+		AB8FE4321E8F4490008438BB /* CALayerProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerProgressView.h; sourceTree = "<group>"; };
+		AB8FE4331E8F4490008438BB /* CALayerProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerProgressView.m; sourceTree = "<group>"; };
+		AB8FE4351E8F7176008438BB /* LoadProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadProgressView.h; sourceTree = "<group>"; };
+		AB8FE4361E8F7176008438BB /* LoadProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadProgressView.m; sourceTree = "<group>"; };
 		AB966A761E824F060028D91D /* SystemPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemPhotoManager.h; sourceTree = "<group>"; };
 		AB966A771E824F060028D91D /* SystemPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemPhotoManager.m; sourceTree = "<group>"; };
 		AB966A801E82754A0028D91D /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
@@ -333,6 +342,8 @@
 				AB730C2A1E7A8C6C00D42FD9 /* AnimationViewController.m */,
 				AB730C2C1E7A8FA800D42FD9 /* CABasicAnimationViewController.h */,
 				AB730C2D1E7A8FA800D42FD9 /* CABasicAnimationViewController.m */,
+				AB8FE42F1E8F4460008438BB /* CALayerProgressViewController.h */,
+				AB8FE4301E8F4460008438BB /* CALayerProgressViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -356,6 +367,10 @@
 			children = (
 				AB730C2F1E7A8FD300D42FD9 /* CABasicAnimationView.h */,
 				AB730C301E7A8FD300D42FD9 /* CABasicAnimationView.m */,
+				AB8FE4321E8F4490008438BB /* CALayerProgressView.h */,
+				AB8FE4331E8F4490008438BB /* CALayerProgressView.m */,
+				AB8FE4351E8F7176008438BB /* LoadProgressView.h */,
+				AB8FE4361E8F7176008438BB /* LoadProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1146,6 +1161,7 @@
 				B21322AF1E6845B1000E73CD /* LoginViewController.m in Sources */,
 				AB4A34571E80F6F0007E5986 /* DMImagePickerCollectionViewCell.m in Sources */,
 				B249EF3C1E6A54F9000FF15B /* UIImage+MultiFormat.m in Sources */,
+				AB8FE4341E8F4490008438BB /* CALayerProgressView.m in Sources */,
 				B249EF0B1E6A54F8000FF15B /* IQToolbar.m in Sources */,
 				B249EF0E1E6A54F8000FF15B /* MASCompositeConstraint.m in Sources */,
 				B270E4171E6D2CC8002DA883 /* TimerManagerObject.m in Sources */,
@@ -1172,6 +1188,7 @@
 				B2603C571E6FA26000CE572A /* HomeViewController.m in Sources */,
 				B2BCAC971E6FF4D900CCD217 /* PublishView.m in Sources */,
 				B249EF4A1E6A5553000FF15B /* StringUtil.m in Sources */,
+				AB8FE4371E8F7176008438BB /* LoadProgressView.m in Sources */,
 				B249EF3A1E6A54F9000FF15B /* UIButton+WebCache.m in Sources */,
 				B249EF0F1E6A54F8000FF15B /* MASConstraint.m in Sources */,
 				B249EF021E6A54F8000FF15B /* IQUITextFieldView+Additions.m in Sources */,
@@ -1215,6 +1232,7 @@
 				B249EF3D1E6A54F9000FF15B /* UIImage+WebP.m in Sources */,
 				AB730C281E7A6E7E00D42FD9 /* HomeView.m in Sources */,
 				AB696EB11E7FC72D008E1041 /* DMImagePickerViewController.m in Sources */,
+				AB8FE4311E8F4460008438BB /* CALayerProgressViewController.m in Sources */,
 				B2603C5D1E6FB59900CE572A /* DaliyLifeView.m in Sources */,
 				B249EF001E6A54F8000FF15B /* IQNSArray+Sort.m in Sources */,
 			);

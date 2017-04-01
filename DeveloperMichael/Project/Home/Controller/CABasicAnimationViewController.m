@@ -91,6 +91,7 @@
 - (CABasicAnimationView *)basicAnimationView {
     if (!_basicAnimationView) {
         _basicAnimationView = [[CABasicAnimationView alloc] init];
+        _basicAnimationView.titleLabel.text = self.navigationBarTitle;
         _basicAnimationView.delegate = self;
     }
     return _basicAnimationView;

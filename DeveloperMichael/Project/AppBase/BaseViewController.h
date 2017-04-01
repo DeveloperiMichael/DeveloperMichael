@@ -13,6 +13,7 @@
 
 /** 是否需要返回某个界面的方法 */
 
+@property (nonatomic, copy) NSString *navigationBarTitle;
 
 /** 如果有长连接 */
 - (void)socketResponseWithContent:(NSDictionary *)content userId:(NSString *)userId fromSource:(NSString *)fromSource;
