@@ -8,6 +8,7 @@
 
 #import "LoadProgressView.h"
 #import "BaseViewHeader.h"
+#import "BaseViewHeader.h"
 
 @interface LoadProgressView()
 
@@ -25,6 +26,7 @@
     self = [super init];
     if (self) {
         [self setupData];
+        [self addNotificationObserver];
     }
     return self;
 }
@@ -53,8 +55,8 @@
 
 - (void)setupData {
     self.animationDuration = 1.0;
-    self.progressColor = [UIColor grayColor];
-    self.progressWidth = 2.0;
+    self.progressColor = kColorByRGB(245, 30, 1, 1);
+    self.progressWidth = 4.0;
 }
 
 - (void)setupLoadProgress {
@@ -73,7 +75,7 @@
     rotationAni.toValue = @(2 * M_PI);
     rotationAni.duration = 3;
     rotationAni.repeatCount = MAXFLOAT;
-    //[self.layer addAnimation:rotationAni forKey:@"roration"];
+    [self.layer addAnimation:rotationAni forKey:@"roration"];
     
     // strokeEnd 正向画出路径
     CABasicAnimation *endAni = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];

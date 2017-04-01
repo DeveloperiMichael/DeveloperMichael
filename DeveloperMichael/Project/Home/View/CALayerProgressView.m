@@ -59,7 +59,7 @@ static const CGFloat viewLength = 80;
 - (void)setupSubviewsContraints{
     [self addSubview:self.progressView];
     [_progressView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(0.25*kScreenWidth());
+        make.centerX.mas_equalTo(self).mas_offset(-kScreenWidth()*0.25);
         make.top.mas_equalTo(self.navBarView.mas_bottom).mas_offset(20);
         make.size.mas_equalTo(CGSizeMake(viewLength, viewLength));
     }];
