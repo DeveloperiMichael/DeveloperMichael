@@ -1,5 +1,5 @@
 //
-//  WaterfallCollectionViewController.h
+//  WaterFlowCollectionViewController.h
 //  DeveloperMichael
 //
 //  Created by 张炯 on 17/4/21.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface WaterfallCollectionViewController : BaseViewController
+@interface WaterFlowCollectionViewController : BaseViewController
 
 @end

@@ -112,6 +112,7 @@
         _titleLabel.textColor = [UIColor whiteColor];
         _titleLabel.font = [UIFont systemFontOfSize:18.0];
         _titleLabel.text = @"DeveloperMichael";
+        _titleLabel.adjustsFontSizeToFitWidth = YES;
     }
     return _titleLabel;
 }
@@ -142,16 +143,17 @@
         make.height.mas_equalTo(NavigationBarHeight());
         make.width.mas_equalTo(80);
     }];
-    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(_navBarView);
-        make.height.mas_equalTo(NavigationBarHeight());
-        make.top.mas_equalTo(StatusBarHeight());
-    }];
     [_rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(_navBarView).mas_offset(-12);
         make.height.mas_equalTo(NavigationBarHeight());
         make.top.mas_equalTo(StatusBarHeight());
         make.width.mas_equalTo(60);
+    }];
+    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(NavigationBarHeight());
+        make.top.mas_equalTo(StatusBarHeight());
+        make.left.mas_equalTo(_leftButton.mas_right);
+        make.right.mas_equalTo(_rightButton.mas_left);
     }];
 }
 

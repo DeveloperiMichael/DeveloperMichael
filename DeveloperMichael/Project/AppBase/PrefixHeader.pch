@@ -19,6 +19,8 @@
 #import "CALayer+AnimationExtension.h"
 #import "UIImage+SAUImageHandle.h"
 #import "PHAsset+Extension.h"
+#import "YYModel.h"
+#import "MJExtension.h"
 
 #endif
 

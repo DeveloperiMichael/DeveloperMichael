@@ -7,8 +7,9 @@
 //
 
 #import "MultipleCollectionViewController.h"
-#import "WaterfallCollectionViewController.h"
+#import "WaterFlowCollectionViewController.h"
 #import "HomeView.h"
+#import "PageCollectionViewController.h"
 
 @interface MultipleCollectionViewController ()<UITableViewDataSource,UITableViewDelegate,BaseViewDelegate>
 
@@ -94,12 +95,12 @@
     switch (indexPath.row) {
         case 0:
         {
-            vc = [[WaterfallCollectionViewController alloc] init];
+            vc = [[WaterFlowCollectionViewController alloc] init];
         }
             break;
         case 1:
         {
-            
+            vc = [[PageCollectionViewController alloc] init];
         }
             break;
         case 2:
@@ -163,16 +164,16 @@
     if (!_MultipleCollectionView) {
         _MultipleCollectionView = [[HomeView alloc] init];
         _MultipleCollectionView.delegate = self;
-        _smallAnimalView.homeTableView.delegate = self;
-        _smallAnimalView.homeTableView.dataSource = self;
-        _smallAnimalView.titleLabel.text = self.navigationBarTitle;
+        _MultipleCollectionView.homeTableView.delegate = self;
+        _MultipleCollectionView.homeTableView.dataSource = self;
+        _MultipleCollectionView.titleLabel.text = self.navigationBarTitle;
     }
     return _MultipleCollectionView;
 }
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [[NSMutableArray alloc] initWithObjects:@"WaterfallCollectionView", nil];
+        _titleArray = [[NSMutableArray alloc] initWithObjects:@"WaterFlowCollection",@"PageCollection", nil];
     }
     return _titleArray;
 }
@@ -181,7 +182,7 @@
 #pragma mark- SetupConstraints
 
 - (void)setupSubviewsContraints{
-    [self.view addSubview:self.smallAnimalView];
+    [self.view addSubview:self.MultipleCollectionView];
     [_MultipleCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];
