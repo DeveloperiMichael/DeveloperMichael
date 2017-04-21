@@ -7,15 +7,62 @@
 //
 
 #import "PageCollectionView.h"
+#import "SACardPageViewLayout.h"
 
 @implementation PageCollectionView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+#pragma mark-
+#pragma mark- View Life Cycle
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupSubviewsContraints];
+    }
+    return self;
 }
-*/
+
+#pragma mark-
+#pragma mark- delegate
+
+
+
+
+
+#pragma mark-
+#pragma mark- Event response
+
+
+
+
+#pragma mark-
+#pragma mark- Private Methods
+
+
+
+
+#pragma mark-
+#pragma mark- Getters && Setters
+
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        SACardPageViewLayout *layout = [[SACardPageViewLayout alloc] init];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    }
+    return _collectionView;
+}
+
+#pragma mark-
+#pragma mark- SetupConstraints
+
+- (void)setupSubviewsContraints{
+    [self addSubview:self.collectionView];
+    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.navBarView.mas_bottom);
+        make.left.right.bottom.mas_equalTo(self);
+    }];
+}
+  
 
 @end

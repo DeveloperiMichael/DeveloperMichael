@@ -10,4 +10,5 @@
 
 @interface PageCollectionView : BaseView
 
+@property (nonatomic, strong) UICollectionView *collectionView;
 @end
