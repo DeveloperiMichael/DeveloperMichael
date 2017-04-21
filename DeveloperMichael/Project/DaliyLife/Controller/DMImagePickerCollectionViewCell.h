@@ -12,6 +12,5 @@
 
 @property (nonatomic, strong) UIImageView *contentImageView;
 @property (nonatomic, strong) UIButton *selectButton;
-@property (nonatomic, assign) NSInteger gridCount;
 
 @end

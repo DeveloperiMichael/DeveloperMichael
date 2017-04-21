@@ -13,5 +13,6 @@
 @property (nonatomic, strong) UIPlaceholderTextView *placeholderTextView;
 @property (nonatomic, strong) UICollectionView *collectionView;
 
+- (instancetype)initWithGridCount:(NSInteger)gridCount;
 
 @end

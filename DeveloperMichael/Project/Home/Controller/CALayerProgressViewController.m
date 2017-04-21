@@ -13,6 +13,7 @@
 @interface CALayerProgressViewController ()<BaseViewDelegate>
 
 @property (nonatomic, strong) CALayerProgressView *layerProgressView;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -24,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(progressTimer:) userInfo:nil repeats:YES];
     [self setupSubviewsContraints];
 }
 
@@ -31,6 +33,30 @@
 #pragma mark-
 #pragma mark- Request
 
+- (void)progressTimer:(NSTimer *)timer
+{
+    self.layerProgressView.circleProgress.progressPercent += 0.01;
+    self.layerProgressView.circleProgress.centerLabel.text = [NSString stringWithFormat:@"%.02f%%", self.layerProgressView.circleProgress.progressPercent*100];
+    
+    self.layerProgressView.antiCircleProgress.progressPercent += 0.01;
+    
+    self.layerProgressView.noWaveProgressView.percent += 0.01;
+    self.layerProgressView.noWaveProgressView.centerLabel.text = [NSString stringWithFormat:@"%.02f%%", self.layerProgressView.noWaveProgressView.percent*100];
+    
+    self.layerProgressView.waveProgressView.percent += 0.01;
+    self.layerProgressView.waveProgressView.centerLabel.text = [NSString stringWithFormat:@"%.02f%%", self.layerProgressView.waveProgressView.percent*100];
+
+    
+    if(self.layerProgressView.circleProgress.progressPercent >= 1)
+    {
+        self.layerProgressView.circleProgress.progressPercent = 0;
+        self.layerProgressView.antiCircleProgress.progressPercent = 0;
+        self.layerProgressView.waveProgressView.percent = 0;
+        self.layerProgressView.noWaveProgressView.percent = 0;
+    }
+    
+    
+}
 
 
 
@@ -76,7 +102,6 @@
         _layerProgressView = [[CALayerProgressView alloc] init];
         _layerProgressView.delegate = self;
         _layerProgressView.titleLabel.text = self.navigationBarTitle;
-        
     }
     return _layerProgressView;
 }

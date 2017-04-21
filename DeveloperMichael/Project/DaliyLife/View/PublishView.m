@@ -25,10 +25,10 @@
 #pragma mark-
 #pragma mark- View Life Cycle
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+- (instancetype)initWithGridCount:(NSInteger)gridCount {
+    self = [super init];
     if (self) {
-        kCollectionImageLength = (kScreenWidth()-kScreenWidthRatio(5)*5)/4;
+        kCollectionImageLength = (kScreenWidth()-kScreenWidthRatio(5)*(gridCount+1))/gridCount;
         [self setupSubviewsContraints];
     }
     return self;
@@ -70,6 +70,7 @@
         _placeholderTextView.layer.masksToBounds = YES;
         _placeholderTextView.limitCharacter = 20;
         _placeholderTextView.layer.cornerRadius = 3;
+        
     }
     return _placeholderTextView;
 }
@@ -81,7 +82,7 @@
         layout.minimumLineSpacing = kScreenWidthRatio(5);
         layout.itemSize = CGSizeMake(kCollectionImageLength, kCollectionImageLength);
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-        _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.backgroundColor = [UIColor brownColor];
         
     }
     return _collectionView;

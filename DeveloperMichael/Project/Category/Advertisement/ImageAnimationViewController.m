@@ -33,6 +33,7 @@ static float const kAnimationDuration = 3.5;
         self.animationImageView.alpha = 0.1;
         self.animationImageView.transform = CGAffineTransformMakeScale(1.1, 1.1);
     } completion:^(BOOL finished) {
+        [_animationImageView stopAnimating];
         AdvertiseViewController *vc = [[AdvertiseViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }];
@@ -79,8 +80,10 @@ static float const kAnimationDuration = 3.5;
 - (void)prepareAnimationImage {
     NSInteger imageCount = 80;
     for (int i=1; i<imageCount; i++) {
-        NSString *imageName = [NSString stringWithFormat:@"BootAnimation%d",i];
-        UIImage *image = [UIImage imageNamed:imageName];
+        //NSString *imageName = [NSString stringWithFormat:@"BootAnimation%d",i];
+        NSBundle *bundle = [NSBundle mainBundle];
+        NSString *path = [bundle pathForResource:[NSString stringWithFormat:@"BootAnimation%d",i] ofType:@"png"];
+        UIImage *image = [UIImage imageWithContentsOfFile:path];
         [self.imageArray addObject:image];
     }
 }

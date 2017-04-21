@@ -21,4 +21,5 @@ typedef void(^finishBlock)(NSArray *selectArray);
 /* 可选照片数量 default is 9 */
 @property (nonatomic, assign) NSInteger maxSelectCount;
 
+- (instancetype)initWithGridCount:(NSInteger)gridCount;
 @end

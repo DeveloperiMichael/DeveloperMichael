@@ -12,10 +12,6 @@
 
 @interface UIPlaceholderTextView ()<UITextViewDelegate>
 
-{
-    float kCollectionImageLength;
-}
-
 @property (nonatomic, strong) UILabel *placeHolderLabel;
 @property (nonatomic, strong) UITextView *contentTextView;
 @property (nonatomic, strong) UILabel *characterLabel;
@@ -30,10 +26,9 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        kCollectionImageLength = (kScreenWidth()-kScreenWidthRatio(5)*5)/4;
         _limitCharacter = 200;
         [self setupSubviewsContraints];
-    }
+    }            
     return self;
 }
 

@@ -10,4 +10,6 @@
 
 @interface PublishViewController : BaseViewController
 
+- (instancetype)initWithGridCount:(NSInteger)gridCount;
+
 @end

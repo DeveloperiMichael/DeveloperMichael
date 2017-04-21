@@ -57,7 +57,7 @@
 #pragma mark- Event response
 
 - (void)rightButtonClicked:(BaseView *)view {
-    PublishViewController *vc = [[PublishViewController alloc] init];
+    PublishViewController *vc = [[PublishViewController alloc] initWithGridCount:5];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

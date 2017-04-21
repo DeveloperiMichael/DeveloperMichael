@@ -13,5 +13,6 @@
 @property (nonatomic, strong) UIImageView *publishImageView;
 @property (nonatomic, strong) UIButton *selectButton;
 @property (nonatomic, strong) UIImage *buttonImage;
+@property (nonatomic, assign) NSInteger gridCount;
 
 @end

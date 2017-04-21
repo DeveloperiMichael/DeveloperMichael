@@ -33,7 +33,6 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.backgroundColor = [UIColor clearColor];
     [self setupLoadProgress];
 }
 
@@ -55,8 +54,8 @@
 
 - (void)setupData {
     self.animationDuration = 1.0;
-    self.progressColor = kColorByRGB(245, 30, 1, 1);
-    self.progressWidth = 4.0;
+    self.progressColor = kColorByRGB(18, 168, 75, 1);
+    self.progressWidth = 3.0;
 }
 
 - (void)setupLoadProgress {

@@ -25,15 +25,17 @@
 #pragma mark-
 #pragma mark- View Life Cycle
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+- (instancetype)init {
+    self = [super init];
     if (self) {
-        kCollectionImageLength = (kScreenWidth()-kScreenWidthRatio(5)*5)/4;
+        _gridCount = 4;
+        kCollectionImageLength = (kScreenWidth()-kScreenWidthRatio(5)*(_gridCount+1))/_gridCount;
         [self setupSubviewsContraints];
     }
     
     return self;
 }
+
 
 
 #pragma mark-
@@ -53,7 +55,18 @@
 #pragma mark-
 #pragma mark- Private Methods
 
-
+- (void)setGridCount:(NSInteger)gridCount {
+    
+    [self.publishImageView removeFromSuperview];
+    [self.selectButton removeFromSuperview];
+    
+    _gridCount = gridCount;
+    if (_gridCount==0) {
+        _gridCount = 4;
+    }
+    kCollectionImageLength = (kScreenWidth()-kScreenWidthRatio(5)*(_gridCount+1))/_gridCount;
+    [self setupSubviewsContraints];
+}
 
 
 

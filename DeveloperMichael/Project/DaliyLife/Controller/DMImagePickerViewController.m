@@ -35,13 +35,24 @@
 #pragma mark-
 #pragma mark- View Life Cycle
 
+- (instancetype)initWithGridCount:(NSInteger)gridCount {
+    self = [super init];
+    if (self) {
+        _gridCount = gridCount;
+        kCollectionImageLength = (kScreenWidth()-kScreenWidthRatio(5)*(_gridCount+1))/_gridCount;
+        _maxSelectCount = 9;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
     _allAssetArray = [[SystemPhotoManager shareSystemPhotoManagerInstance] getAllAssetInPhotoAblumWithAscending:YES];
-    
-    [self configDefault];
+    if (_gridCount==0) {
+        _gridCount = 4;
+    }
     [self setupSubviewsContraints];
 }
 
@@ -169,13 +180,6 @@
 #pragma mark-
 #pragma mark- Private Methods
 
-/* 默认配置 */
-- (void)configDefault {
-    _gridCount = 4;
-    kCollectionImageLength = (kScreenWidth()-kScreenWidthRatio(5)*(_gridCount+1))/_gridCount;
-    _maxSelectCount = 9;
-    
-}
 
 //从这个回调中获取所图片
 - (void)getImageWithAsset:(PHAsset *)asset completion:(void (^)(UIImage *image))completion

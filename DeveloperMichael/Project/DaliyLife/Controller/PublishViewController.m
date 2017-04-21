@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) PublishView *publishView;
 @property (nonatomic, strong) NSMutableArray *imageArray;
+@property (nonatomic, assign) NSInteger gridCount;
 
 @end
 
@@ -26,10 +27,25 @@
 #pragma mark-
 #pragma mark- View Life Cycle
 
+- (instancetype)initWithGridCount:(NSInteger)gridCount {
+    self = [super init];
+    if (self) {
+        _gridCount = gridCount;
+    }
+    return self;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _gridCount = 4;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupSubviewsContraints];
-    
 }
 
 
@@ -72,7 +88,7 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PublishImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collection" forIndexPath:indexPath];
-    
+    cell.gridCount = _gridCount;
     if (_imageArray.count == 1) {
         cell.publishImageView.image=_imageArray[0];
         cell.selectButton.hidden = YES;
@@ -112,12 +128,15 @@
         case 1:
         {
             //photograph album
-            DMImagePickerViewController *vc = [[DMImagePickerViewController alloc] init];
+            DMImagePickerViewController *vc = [[DMImagePickerViewController alloc] initWithGridCount:5];
             vc.finishSelectBlock =^(NSArray *selectArray){
                 [self.imageArray removeLastObject];
                 [self.imageArray addObjectsFromArray:selectArray];
                 UIImage *image = [UIImage imageNamed:@"icon_add"];
                 [self.imageArray addObject:image];
+                
+                NSInteger lineNumber = self.imageArray.count/_gridCount;
+                
                 [_publishView.collectionView reloadData];
             };
             [self.navigationController pushViewController:vc animated:YES];
@@ -187,7 +206,7 @@
 
 - (PublishView *)publishView {
     if (!_publishView) {
-        _publishView = [[PublishView alloc] init];
+        _publishView = [[PublishView alloc] initWithGridCount:_gridCount];
         _publishView.delegate = self;
         _publishView.backgroundColor = kColorByRGB(0, 0, 0, 0.3);
         _publishView.collectionView.delegate = self;

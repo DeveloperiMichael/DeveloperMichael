@@ -64,8 +64,16 @@
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(kScreenWidthRatio(12));
             make.right.mas_equalTo(-kScreenWidthRatio(12));
-            make.top.mas_equalTo(49.5);
+            make.top.mas_equalTo(43.5);
             make.height.mas_equalTo(0.5);
+        }];
+        UIImageView *next = [[UIImageView alloc] init];
+        next.image = [UIImage imageNamed:@"next"];
+        [cell.contentView addSubview:next];
+        [next mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(14);
+            make.right.mas_equalTo(-kScreenWidthRatio(12));
+            make.size.mas_equalTo(CGSizeMake(16, 16));
         }];
     }
     cell.backgroundColor = [UIColor clearColor];
@@ -75,7 +83,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return 44;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -158,6 +166,7 @@
         _animationView.delegate = self;
         _animationView.homeTableView.delegate = self;
         _animationView.homeTableView.dataSource = self;
+        _animationView.titleLabel.text = self.navigationBarTitle;
     }
     return _animationView;
 }

@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "HomeView.h"
 #import "AnimationViewController.h"
+#import "MultipleCollectionViewController.h"
 #import "TimerManagerObject.h"
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -65,8 +66,16 @@
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(kScreenWidthRatio(12));
             make.right.mas_equalTo(-kScreenWidthRatio(12));
-            make.top.mas_equalTo(49.5);
+            make.top.mas_equalTo(43.5);
             make.height.mas_equalTo(0.5);
+        }];
+        UIImageView *next = [[UIImageView alloc] init];
+        next.image = [UIImage imageNamed:@"next"];
+        [cell.contentView addSubview:next];
+        [next mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(14);
+            make.right.mas_equalTo(-kScreenWidthRatio(12));
+            make.size.mas_equalTo(CGSizeMake(16, 16));
         }];
     }
     cell.backgroundColor = [UIColor clearColor];
@@ -78,12 +87,23 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return 44;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    AnimationViewController *vc = [[AnimationViewController alloc] init];
+    BaseViewController *vc;
+    switch (indexPath.row) {
+        case 0:
+            vc = [[AnimationViewController alloc] init];
+            break;
+        case 1:
+            vc = [[MultipleCollectionViewController alloc] init];
+            break;
+        default:
+            break;
+    }
+    vc.navigationBarTitle = _titleArray[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -112,7 +132,7 @@
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType", nil];
+        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType",@"UICollectionViewType", nil];
     }
     return _titleArray;
 }

@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-///ProgressView
 @interface LoadProgressView : UIView
 
 ///default is 2
