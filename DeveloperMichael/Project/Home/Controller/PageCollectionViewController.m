@@ -8,10 +8,14 @@
 
 #import "PageCollectionViewController.h"
 #import "PageCollectionView.h"
+#import "CommodityCollectionViewCell.h"
 
-@interface PageCollectionViewController ()<BaseViewDelegate>
+@interface PageCollectionViewController ()<BaseViewDelegate,PageCollectionViewDelegate,PageCollectionViewDataSource>
 
 @property (nonatomic, strong) PageCollectionView *pageCollectionView;
+@property (nonatomic, strong) UICollectionViewCell *frontView;
+@property (nonatomic, strong) UICollectionViewCell *backView;
+
 
 @end
 
@@ -43,15 +47,31 @@
 
 
 #pragma mark-
-#pragma mark- SACardViewDataSource
+#pragma mark- DataSource
 
+- (Class)collectionFrontCellClassInPageView:(PageCollectionView *)pageCollectionView {
+    return [CommodityCollectionViewCell class];
+}
 
+- (Class)collectionBackCellClassInPageView:(PageCollectionView *)pageCollectionView {
+    return [CommodityCollectionViewCell class];
+}
 
+- (NSUInteger)numberOfCollectionViewCellInPageView:(PageCollectionView *)pageCollectionView {
+    return 100;
+}
+
+- (void)pageView:(PageCollectionView *)pageView deployCollectionViewCell:(UICollectionViewCell *)collectionViewCell index:(NSUInteger)index isFront:(BOOL)isFront {
+    CommodityCollectionViewCell *cell = (CommodityCollectionViewCell *)collectionViewCell;
+    if ([cell.reuseIdentifier isEqualToString:@"com.homeCollection.frontCell.identifier"]) {
+        cell.imgView.backgroundColor = kRandomColor;
+    }else{
+        cell.imgView.backgroundColor = [UIColor brownColor];
+    }
+}
 
 #pragma mark-
 #pragma mark- delegate
-
-
 
 
 #pragma mark-
@@ -78,10 +98,13 @@
     if (!_pageCollectionView) {
         _pageCollectionView = [[PageCollectionView alloc] init];
         _pageCollectionView.delegate = self;
+        _pageCollectionView.page_dataSource = self;
+        _pageCollectionView.page_delegate = self;
         _pageCollectionView.titleLabel.text = self.navigationBarTitle;
     }
     return _pageCollectionView;
 }
+
 
 #pragma mark-
 #pragma mark- SetupConstraints

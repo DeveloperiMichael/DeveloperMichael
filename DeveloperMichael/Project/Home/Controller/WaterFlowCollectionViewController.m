@@ -49,16 +49,15 @@
 #pragma mark-
 #pragma mark- UICollectionViewDelegate,UICollectionViewDataSource
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.commodityArray.count;
 }
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CommodityCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CommodityCollectionViewCell" forIndexPath:indexPath];
-    cell.backgroundColor = kRandomColor;
+    cell.backgroundColor = [UIColor clearColor];
     CommodityModel *model = _commodityArray[indexPath.item];
-    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:model.img]];
+    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:model.img] completed:nil];
     cell.priceLabel.text = model.price;
     return cell;
 }
@@ -68,7 +67,7 @@
 
 //代理方法
 - (CGFloat)waterFlowLayout:(WaterFlowCollectionViewLayout *)layout heightByWidth:(CGFloat)width atIndexPath:(NSIndexPath *)indexPath {
-    CommodityModel * shop = _commodityArray[indexPath.item];
+    CommodityModel *shop = _commodityArray[indexPath.item];
     return shop.h/shop.w*width;
 }
 
@@ -89,7 +88,7 @@
 #pragma mark- Private Methods
 
 - (void)configBaseData {
-    NSArray * shopsArray = [CommodityModel objectArrayWithFilename:@"1.plist"];
+    NSArray * shopsArray = [CommodityModel objectArrayWithFilename:@"2.plist"];
     [self.commodityArray addObjectsFromArray:shopsArray];
 }
 

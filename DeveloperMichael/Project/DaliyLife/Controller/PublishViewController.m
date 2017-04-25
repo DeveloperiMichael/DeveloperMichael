@@ -135,7 +135,7 @@
                 UIImage *image = [UIImage imageNamed:@"icon_add"];
                 [self.imageArray addObject:image];
                 
-                NSInteger lineNumber = self.imageArray.count/_gridCount;
+                //NSInteger lineNumber = self.imageArray.count/_gridCount;
                 
                 [_publishView.collectionView reloadData];
             };

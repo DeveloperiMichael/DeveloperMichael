@@ -48,10 +48,10 @@
 - (UILabel *)priceLabel {
     if (!_priceLabel) {
         _priceLabel = [[UILabel alloc] init];
-        _priceLabel.backgroundColor = kColorByRGB(0, 0, 0, 0.3);
+        _priceLabel.backgroundColor = kColorByRGB(0, 0, 0, 0.4);
         _priceLabel.textColor = [UIColor whiteColor];
         _priceLabel.textAlignment = NSTextAlignmentCenter;
-        _priceLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:13.0]];
+        _priceLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:14.0]];
     }
     return _priceLabel;
 }
@@ -75,7 +75,7 @@
     }];
     [_priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_equalTo(self);
-        make.height.mas_equalTo(20);
+        make.height.mas_equalTo(kScreenHeightRatio(20));
     }];
 }
 

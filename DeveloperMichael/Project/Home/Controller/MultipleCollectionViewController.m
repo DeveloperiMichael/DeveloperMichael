@@ -173,7 +173,7 @@
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [[NSMutableArray alloc] initWithObjects:@"WaterFlowCollection",@"PageCollection", nil];
+        _titleArray = [[NSMutableArray alloc] initWithObjects:@"WaterFlowCollection",@"PageCollection",@"TanTanCardSlide", nil];
     }
     return _titleArray;
 }

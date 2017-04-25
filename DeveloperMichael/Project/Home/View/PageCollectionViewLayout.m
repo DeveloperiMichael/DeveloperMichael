@@ -1,14 +1,14 @@
 //
-//  SACardCollectionViewLayout.m
+//  PageCollectionViewLayout.m
 //  SACardDemo
 //
-//  Created by 詹学宝 on 17/2/6.
-//  Copyright © 2017年 学宝工作室. All rights reserved.
+//  Created by 张炯 on 17/4/24.
+//  Copyright © 2017年 张炯. All rights reserved.
 //
 
-#import "SACardPageViewLayout.h"
+#import "PageCollectionViewLayout.h"
 
-@implementation SACardPageViewLayout {
+@implementation PageCollectionViewLayout {
     CGFloat _viewWidth;
     CGFloat _itemWidth;
     NSInteger _cellCount;
@@ -19,6 +19,11 @@
     if (self.visibleCount < 5) {
         self.visibleCount = 5;
     }
+    
+    self.innerTopSpace = 30;
+    self.innerBottomSpace = 30;
+    self.innerHorizontalSpace = 20;
+    
     _cellCount = [self.collectionView numberOfItemsInSection:0];
     _viewWidth =  CGRectGetWidth(self.collectionView.frame);
     _itemWidth = CGRectGetWidth(self.collectionView.frame) - 2 * self.innerHorizontalSpace;
@@ -29,21 +34,27 @@
 }
 
 - (nullable NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
-    if (_cellCount < 1) {
-        return [super layoutAttributesForElementsInRect:rect];
+//    if (_cellCount < 1) {
+//        return [super layoutAttributesForElementsInRect:rect];
+//    }
+//    CGFloat centerX = self.collectionView.contentOffset.x;
+//    NSInteger index = centerX / _viewWidth;
+//    NSInteger count = (self.visibleCount - 1) / 2;
+//    NSInteger minIndex = MAX(0, (index - count));
+//    NSInteger maxIndex = MIN((_cellCount - 1), (index + count));
+//    NSMutableArray *array = [NSMutableArray array];
+//    for (NSInteger i = minIndex; i <= maxIndex; i++) {
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
+//        UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:indexPath];
+//        [array addObject:attributes];
+//    }
+//    return array;
+    NSMutableArray * array = [NSMutableArray array];
+    for (int i = 0; i < _cellCount; i++) {
+        UICollectionViewLayoutAttributes * attrs = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
+        [array addObject:attrs];
     }
-    CGFloat centerX = self.collectionView.contentOffset.x;
-    NSInteger index = centerX / _viewWidth;
-    NSInteger count = (self.visibleCount - 1) / 2;
-    NSInteger minIndex = MAX(0, (index - count));
-    NSInteger maxIndex = MIN((_cellCount - 1), (index + count));
-    NSMutableArray *array = [NSMutableArray array];
-    for (NSInteger i = minIndex; i <= maxIndex; i++) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
-        UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:indexPath];
-        [array addObject:attributes];
-    }
-    return array;
+    return  array;
 }
 
 - (nullable UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -51,14 +62,13 @@
     attributes.size = CGSizeMake(_itemWidth, CGRectGetHeight(self.collectionView.bounds) - self.innerTopSpace - self.innerBottomSpace);
     CGFloat cX =  self.collectionView.contentOffset.x + _viewWidth / 2;
     CGFloat attributesX = _viewWidth * indexPath.item + _viewWidth / 2;
-    //    attributes.zIndex = -fabs(attributesX - cX);
-    //    NSLog(@"zIndex:%ld",(long)attributes.zIndex);
+    //attributes.zIndex = -fabs(attributesX - cX);
     CGFloat delta = cX - attributesX;
     CGFloat ratio =  - delta / (_itemWidth * 2);
     CGFloat scale = 1 - ABS(delta) / (_itemWidth * 8.0) * cos(ratio * M_PI_4);
+    //动画
     attributes.transform = CGAffineTransformMakeScale(scale, scale);
     attributes.center = CGPointMake(attributesX, CGRectGetHeight(self.collectionView.frame) / 2 + (self.innerTopSpace - self.innerBottomSpace)/2);
-    //    NSLog(@"center: %@",NSStringFromCGPoint(attributes.center));
     return attributes;
 }
 

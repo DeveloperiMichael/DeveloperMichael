@@ -1,14 +1,13 @@
 //
-//  SACardCollectionViewLayout.h
-//  SACardDemo
+//  PageCollectionViewLayout.h
 //
-//  Created by 詹学宝 on 17/2/6.
-//  Copyright © 2017年 学宝工作室. All rights reserved.
+//  Created by 张炯 on 17/4/24.
+//  Copyright © 2017年 张炯. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface SACardPageViewLayout : UICollectionViewLayout
+@interface PageCollectionViewLayout : UICollectionViewLayout
 
 @property (nonatomic, assign) CGFloat innerHorizontalSpace;
 
