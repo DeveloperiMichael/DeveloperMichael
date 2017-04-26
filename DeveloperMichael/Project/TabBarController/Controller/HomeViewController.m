@@ -10,6 +10,7 @@
 #import "HomeView.h"
 #import "AnimationViewController.h"
 #import "MultipleCollectionViewController.h"
+#import "MultiMaskViewController.h"
 #import "TimerManagerObject.h"
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -100,6 +101,9 @@
         case 1:
             vc = [[MultipleCollectionViewController alloc] init];
             break;
+        case 2:
+            vc = [[MultiMaskViewController alloc] init];
+            break;
         default:
             break;
     }
@@ -132,7 +136,7 @@
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType",@"UICollectionViewType", nil];
+        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType",@"UICollectionViewType",@"MultiMaskViewType", nil];
     }
     return _titleArray;
 }

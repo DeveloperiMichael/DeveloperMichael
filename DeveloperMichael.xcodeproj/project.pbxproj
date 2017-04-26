@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		AB4A34571E80F6F0007E5986 /* DMImagePickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4A34561E80F6F0007E5986 /* DMImagePickerCollectionViewCell.m */; };
 		AB4A345A1E81191A007E5986 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4A34591E81191A007E5986 /* ImageModel.m */; };
+		AB557CAC1EB06B1800D01C32 /* MultiMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB557CAB1EB06B1800D01C32 /* MultiMaskViewController.m */; };
+		AB557CB21EB0731A00D01C32 /* MultiMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB557CB11EB0731A00D01C32 /* MultiMaskView.m */; };
+		AB557CB51EB07E1300D01C32 /* SnailQuickMaskPopups.m in Sources */ = {isa = PBXBuildFile; fileRef = AB557CB41EB07E1300D01C32 /* SnailQuickMaskPopups.m */; };
+		AB557CB81EB0813900D01C32 /* CustomizedAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB557CB71EB0813900D01C32 /* CustomizedAlertView.m */; };
+		AB557CBB1EB09C2600D01C32 /* CALayer+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB557CBA1EB09C2600D01C32 /* CALayer+Layout.m */; };
 		AB59795A1E9721E400E8F9B6 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5979591E9721E400E8F9B6 /* CircleProgressView.m */; };
 		AB5979601E9772C600E8F9B6 /* WaveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59795F1E9772C600E8F9B6 /* WaveProgressView.m */; };
 		AB696EB11E7FC72D008E1041 /* DMImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB696EB01E7FC72D008E1041 /* DMImagePickerViewController.m */; };
@@ -157,6 +162,7 @@
 		AB9F3F7E1E9F10FD00498BB7 /* BootAnimation9.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9F3F2C1E9F10FD00498BB7 /* BootAnimation9.png */; };
 		ABBD7C651EAF2EF4001ED00B /* TanTanCardSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBD7C641EAF2EF4001ED00B /* TanTanCardSlideViewController.m */; };
 		ABBD7C681EAF3358001ED00B /* TanTanCardSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBD7C671EAF3358001ED00B /* TanTanCardSlideView.m */; };
+		ABBD7C6B1EAF4B26001ED00B /* UserInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBD7C6A1EAF4B26001ED00B /* UserInfoObject.m */; };
 		B204B32D1E68599A009A5936 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B204B32C1E68599A009A5936 /* LoginView.m */; };
 		B204B3301E685C2B009A5936 /* LoginTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = B204B32F1E685C2B009A5936 /* LoginTextFieldView.m */; };
 		B204B3351E6863A5009A5936 /* UIView+ViewFrameGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = B204B3341E6863A5009A5936 /* UIView+ViewFrameGeometry.m */; };
@@ -224,6 +230,16 @@
 		AB4A34561E80F6F0007E5986 /* DMImagePickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMImagePickerCollectionViewCell.m; path = ../Controller/DMImagePickerCollectionViewCell.m; sourceTree = "<group>"; };
 		AB4A34581E81191A007E5986 /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		AB4A34591E81191A007E5986 /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		AB557CAA1EB06B1800D01C32 /* MultiMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiMaskViewController.h; sourceTree = "<group>"; };
+		AB557CAB1EB06B1800D01C32 /* MultiMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiMaskViewController.m; sourceTree = "<group>"; };
+		AB557CB01EB0731A00D01C32 /* MultiMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiMaskView.h; sourceTree = "<group>"; };
+		AB557CB11EB0731A00D01C32 /* MultiMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiMaskView.m; sourceTree = "<group>"; };
+		AB557CB31EB07E1300D01C32 /* SnailQuickMaskPopups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnailQuickMaskPopups.h; sourceTree = "<group>"; };
+		AB557CB41EB07E1300D01C32 /* SnailQuickMaskPopups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnailQuickMaskPopups.m; sourceTree = "<group>"; };
+		AB557CB61EB0813900D01C32 /* CustomizedAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizedAlertView.h; sourceTree = "<group>"; };
+		AB557CB71EB0813900D01C32 /* CustomizedAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizedAlertView.m; sourceTree = "<group>"; };
+		AB557CB91EB09C2600D01C32 /* CALayer+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Layout.h"; sourceTree = "<group>"; };
+		AB557CBA1EB09C2600D01C32 /* CALayer+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Layout.m"; sourceTree = "<group>"; };
 		AB5979581E9721E400E8F9B6 /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
 		AB5979591E9721E400E8F9B6 /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
 		AB59795E1E9772C500E8F9B6 /* WaveProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveProgressView.h; sourceTree = "<group>"; };
@@ -433,6 +449,8 @@
 		ABBD7C641EAF2EF4001ED00B /* TanTanCardSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TanTanCardSlideViewController.m; sourceTree = "<group>"; };
 		ABBD7C661EAF3358001ED00B /* TanTanCardSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TanTanCardSlideView.h; sourceTree = "<group>"; };
 		ABBD7C671EAF3358001ED00B /* TanTanCardSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TanTanCardSlideView.m; sourceTree = "<group>"; };
+		ABBD7C691EAF4B26001ED00B /* UserInfoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoObject.h; sourceTree = "<group>"; };
+		ABBD7C6A1EAF4B26001ED00B /* UserInfoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoObject.m; sourceTree = "<group>"; };
 		B204B32B1E68599A009A5936 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = DeveloperMichael/Project/LoginViewController/View/LoginView.h; sourceTree = SOURCE_ROOT; };
 		B204B32C1E68599A009A5936 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginView.m; path = DeveloperMichael/Project/LoginViewController/View/LoginView.m; sourceTree = SOURCE_ROOT; };
 		B204B32E1E685C2B009A5936 /* LoginTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginTextFieldView.h; path = DeveloperMichael/Project/LoginViewController/View/LoginTextFieldView.h; sourceTree = SOURCE_ROOT; };
@@ -573,6 +591,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB557CA81EB06A2C00D01C32 /* MaskView */ = {
+			isa = PBXGroup;
+			children = (
+				AB557CB01EB0731A00D01C32 /* MultiMaskView.h */,
+				AB557CB11EB0731A00D01C32 /* MultiMaskView.m */,
+				AB557CB31EB07E1300D01C32 /* SnailQuickMaskPopups.h */,
+				AB557CB41EB07E1300D01C32 /* SnailQuickMaskPopups.m */,
+				AB557CB61EB0813900D01C32 /* CustomizedAlertView.h */,
+				AB557CB71EB0813900D01C32 /* CustomizedAlertView.m */,
+			);
+			name = MaskView;
+			sourceTree = "<group>";
+		};
+		AB557CA91EB06A9500D01C32 /* MaskViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB557CAA1EB06B1800D01C32 /* MultiMaskViewController.h */,
+				AB557CAB1EB06B1800D01C32 /* MultiMaskViewController.m */,
+			);
+			name = MaskViewController;
+			sourceTree = "<group>";
+		};
 		AB730C0F1E7A6D3900D42FD9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,8 +627,9 @@
 		AB730C101E7A6D3900D42FD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AB557CA91EB06A9500D01C32 /* MaskViewController */,
 				AB74BAC61E9B5F3700DDF16A /* CollectionViewController */,
-				AB74BAC41E9B5EE300DDF16A /* Animation */,
+				AB74BAC41E9B5EE300DDF16A /* AnimationViewConreoller */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -612,8 +653,9 @@
 		AB730C131E7A6D3900D42FD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB557CA81EB06A2C00D01C32 /* MaskView */,
 				AB9600B61EA99F40008FAB13 /* CollectionView */,
-				AB74BAC51E9B5F0700DDF16A /* Animation */,
+				AB74BAC51E9B5F0700DDF16A /* AnimationView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -735,7 +777,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		AB74BAC41E9B5EE300DDF16A /* Animation */ = {
+		AB74BAC41E9B5EE300DDF16A /* AnimationViewConreoller */ = {
 			isa = PBXGroup;
 			children = (
 				AB730C291E7A8C6C00D42FD9 /* AnimationViewController.h */,
@@ -745,10 +787,10 @@
 				AB8FE42F1E8F4460008438BB /* CALayerProgressViewController.h */,
 				AB8FE4301E8F4460008438BB /* CALayerProgressViewController.m */,
 			);
-			name = Animation;
+			name = AnimationViewConreoller;
 			sourceTree = "<group>";
 		};
-		AB74BAC51E9B5F0700DDF16A /* Animation */ = {
+		AB74BAC51E9B5F0700DDF16A /* AnimationView */ = {
 			isa = PBXGroup;
 			children = (
 				AB730C2F1E7A8FD300D42FD9 /* CABasicAnimationView.h */,
@@ -762,7 +804,7 @@
 				AB59795E1E9772C500E8F9B6 /* WaveProgressView.h */,
 				AB59795F1E9772C600E8F9B6 /* WaveProgressView.m */,
 			);
-			name = Animation;
+			name = AnimationView;
 			sourceTree = "<group>";
 		};
 		AB74BAC61E9B5F3700DDF16A /* CollectionViewController */ = {
@@ -1012,6 +1054,8 @@
 				B247FE041E73F1DC00E5AD2B /* CALayer+AnimationExtension.m */,
 				AB823AC61E8360C200B8E3ED /* PHAsset+Extension.h */,
 				AB823AC71E8360C200B8E3ED /* PHAsset+Extension.m */,
+				AB557CB91EB09C2600D01C32 /* CALayer+Layout.h */,
+				AB557CBA1EB09C2600D01C32 /* CALayer+Layout.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1421,6 +1465,8 @@
 				B270E4191E6D326F002DA883 /* TimerManagerTask.m */,
 				AB966A761E824F060028D91D /* SystemPhotoManager.h */,
 				AB966A771E824F060028D91D /* SystemPhotoManager.m */,
+				ABBD7C691EAF4B26001ED00B /* UserInfoObject.h */,
+				ABBD7C6A1EAF4B26001ED00B /* UserInfoObject.m */,
 			);
 			path = ShareInstance;
 			sourceTree = "<group>";
@@ -1687,13 +1733,16 @@
 				AB730C2B1E7A8C6C00D42FD9 /* AnimationViewController.m in Sources */,
 				AB9600F81EA9F896008FAB13 /* PageCollectionView.m in Sources */,
 				AB730C2E1E7A8FA800D42FD9 /* CABasicAnimationViewController.m in Sources */,
+				ABBD7C6B1EAF4B26001ED00B /* UserInfoObject.m in Sources */,
 				AB696EB41E7FC82D008E1041 /* DMImagePickerView.m in Sources */,
+				AB557CB51EB07E1300D01C32 /* SnailQuickMaskPopups.m in Sources */,
 				B247FDFF1E73CA7E00E5AD2B /* PublishImageCollectionViewCell.m in Sources */,
 				AB9600B11EA84ED5008FAB13 /* LxGridView.m in Sources */,
 				AB9125381EAD964B006D7248 /* SDWebImageManager.m in Sources */,
 				AB9600F51EA9F7DC008FAB13 /* PageCollectionViewController.m in Sources */,
 				B249EF0C1E6A54F8000FF15B /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				AB7E69871E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m in Sources */,
+				AB557CBB1EB09C2600D01C32 /* CALayer+Layout.m in Sources */,
 				B21322A61E684165000E73CD /* BaseViewController.m in Sources */,
 				AB73AAAD1E84F6FE00685A52 /* DateUtil.m in Sources */,
 				B249EF501E6A6745000FF15B /* pinyin.c in Sources */,
@@ -1704,6 +1753,7 @@
 				AB9125371EAD964B006D7248 /* SDWebImageDownloaderOperation.m in Sources */,
 				AB8FE4371E8F7176008438BB /* LoadProgressView.m in Sources */,
 				B249EF0F1E6A54F8000FF15B /* MASConstraint.m in Sources */,
+				AB557CAC1EB06B1800D01C32 /* MultiMaskViewController.m in Sources */,
 				AB9600E81EA9E492008FAB13 /* MJType.m in Sources */,
 				B249EF021E6A54F8000FF15B /* IQUITextFieldView+Additions.m in Sources */,
 				B249EF091E6A54F8000FF15B /* IQBarButtonItem.m in Sources */,
@@ -1715,6 +1765,7 @@
 				AB91253F1EAD964B006D7248 /* UIView+WebCacheOperation.m in Sources */,
 				AB7E69841E88A17700B6F77E /* DMImageBrowserView.m in Sources */,
 				B2088FBD1E5BDAB7003F9514 /* AppDelegate.m in Sources */,
+				AB557CB81EB0813900D01C32 /* CustomizedAlertView.m in Sources */,
 				B249EF031E6A54F8000FF15B /* IQUIView+Hierarchy.m in Sources */,
 				AB5979601E9772C600E8F9B6 /* WaveProgressView.m in Sources */,
 				AB9600B31EA84ED5008FAB13 /* LxGridViewFlowLayout.m in Sources */,
@@ -1725,6 +1776,7 @@
 				B270E41A1E6D326F002DA883 /* TimerManagerTask.m in Sources */,
 				B2BCAC941E6FF4B900CCD217 /* PublishViewController.m in Sources */,
 				AB91253E1EAD964B006D7248 /* UIImageView+WebCache.m in Sources */,
+				AB557CB21EB0731A00D01C32 /* MultiMaskView.m in Sources */,
 				B21322A51E684165000E73CD /* BaseView.m in Sources */,
 				AB59795A1E9721E400E8F9B6 /* CircleProgressView.m in Sources */,
 				B249EF111E6A54F8000FF15B /* MASLayoutConstraint.m in Sources */,

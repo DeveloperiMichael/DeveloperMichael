@@ -1,35 +1,32 @@
 //
-//  AnimationViewController.m
+//  MultiMaskViewController.m
 //  DeveloperMichael
 //
-//  Created by 张炯 on 17/3/16.
+//  Created by 张炯 on 17/4/26.
 //  Copyright © 2017年 张炯. All rights reserved.
 //
 
-#import "MultipleCollectionViewController.h"
-#import "WaterFlowCollectionViewController.h"
+#import "MultiMaskViewController.h"
 #import "HomeView.h"
-#import "PageCollectionViewController.h"
+#import "CustomizedAlertView.h"
+#import "SnailQuickMaskPopups.h"
+@interface MultiMaskViewController ()<BaseViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
-
-@interface MultipleCollectionViewController ()<UITableViewDataSource,UITableViewDelegate,BaseViewDelegate>
-
-@property (nonatomic, strong) HomeView *MultipleCollectionView;
+@property (nonatomic, strong) HomeView *multiMaskView;
 @property (nonatomic, strong) NSMutableArray *titleArray;
 
 @end
 
-@implementation MultipleCollectionViewController
+@implementation MultiMaskViewController
 
 #pragma mark-
 #pragma mark- View Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     [self setupSubviewsContraints];
-    
 }
-
 
 
 #pragma mark-
@@ -37,13 +34,16 @@
 
 
 
+
 #pragma mark-
-#pragma mark- SANetworkResponseProtocol
+#pragma mark- Response
 
 
 
 #pragma mark-
 #pragma mark- SACardViewDataSource
+
+
 
 
 #pragma mark-
@@ -91,66 +91,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    BaseViewController *vc;
-    
-    switch (indexPath.row) {
-        case 0:
-        {
-            vc = [[WaterFlowCollectionViewController alloc] init];
-        }
-            break;
-        case 1:
-        {
-            vc = [[PageCollectionViewController alloc] init];
-        }
-            break;
-        case 2:
-        {
-            
-        }
-            break;
-        case 3:
-        {
-            
-        }
-            break;
-        case 4:
-        {
-            
-        }
-            break;
-        case 5:
-        {
-            
-        }
-            break;
-        case 6:
-        {
-            
-        }
-            break;
-        default:
-            break;
-    }
-    
-    if (vc) {
-        vc.navigationBarTitle = _titleArray[indexPath.row];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-    
+    CustomizedAlertView *view = [[CustomizedAlertView alloc] init];
+    [view showAlertView];
 }
+
+
 
 #pragma mark-
 #pragma mark- Event response
-
-- (void)leftButtonClicked:(BaseView *)view {
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 - (void)rightButtonClicked:(BaseView *)view {
     
 }
 
+- (void)leftButtonClicked:(BaseView *)view {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 #pragma mark-
 #pragma mark- Private Methods
@@ -161,20 +117,20 @@
 #pragma mark-
 #pragma mark- Getters && Setters
 
-- (HomeView *)MultipleCollectionView {
-    if (!_MultipleCollectionView) {
-        _MultipleCollectionView = [[HomeView alloc] init];
-        _MultipleCollectionView.delegate = self;
-        _MultipleCollectionView.homeTableView.delegate = self;
-        _MultipleCollectionView.homeTableView.dataSource = self;
-        _MultipleCollectionView.titleLabel.text = self.navigationBarTitle;
+- (HomeView *)multiMaskView {
+    if (!_multiMaskView) {
+        _multiMaskView = [[HomeView alloc] init];
+        _multiMaskView.delegate = self;
+        _multiMaskView.homeTableView.delegate = self;
+        _multiMaskView.homeTableView.dataSource = self;
+        _multiMaskView.titleLabel.text = self.navigationBarTitle;
     }
-    return _MultipleCollectionView;
+    return _multiMaskView;
 }
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [[NSMutableArray alloc] initWithObjects:@"WaterFlowCollection",@"PageCollection",@"TanTanCardSlide", nil];
+        _titleArray = [[NSMutableArray alloc] initWithObjects:@"Alert Style",@"WeChat Style",@"Qzone Style",@"Shared Style",@"SlideBar Style",@"Full Style", nil];
     }
     return _titleArray;
 }
@@ -183,26 +139,16 @@
 #pragma mark- SetupConstraints
 
 - (void)setupSubviewsContraints{
-    [self.view addSubview:self.MultipleCollectionView];
-    [_MultipleCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:self.multiMaskView];
+    [_multiMaskView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

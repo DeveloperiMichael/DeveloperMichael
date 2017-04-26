@@ -21,7 +21,7 @@
 #import "PHAsset+Extension.h"
 #import "YYModel.h"
 #import "MJExtension.h"
-
+#import "CALayer+Layout.h"
 #endif
 
 
