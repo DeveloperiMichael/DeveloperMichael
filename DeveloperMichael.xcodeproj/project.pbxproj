@@ -25,6 +25,8 @@
 		AB73AAAD1E84F6FE00685A52 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AB73AAAC1E84F6FE00685A52 /* DateUtil.m */; };
 		AB73AAB01E85146900685A52 /* DMImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB73AAAF1E85146900685A52 /* DMImageBrowserViewController.m */; };
 		AB74BAC31E9B5D2900DDF16A /* MultipleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB74BAC21E9B5D2900DDF16A /* MultipleCollectionViewController.m */; };
+		AB76C6901EB1BAAB0030455E /* SharedStyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB76C68F1EB1BAAB0030455E /* SharedStyleView.m */; };
+		AB76C6931EB1EB430030455E /* ShareCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB76C6921EB1EB430030455E /* ShareCollectionViewCell.m */; };
 		AB7E69841E88A17700B6F77E /* DMImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7E69831E88A17700B6F77E /* DMImageBrowserView.m */; };
 		AB7E69871E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7E69861E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m */; };
 		AB823AC81E8360C200B8E3ED /* PHAsset+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AB823AC71E8360C200B8E3ED /* PHAsset+Extension.m */; };
@@ -262,6 +264,10 @@
 		AB73AAAF1E85146900685A52 /* DMImageBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImageBrowserViewController.m; sourceTree = "<group>"; };
 		AB74BAC11E9B5D2900DDF16A /* MultipleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleCollectionViewController.h; sourceTree = "<group>"; };
 		AB74BAC21E9B5D2900DDF16A /* MultipleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleCollectionViewController.m; sourceTree = "<group>"; };
+		AB76C68E1EB1BAAB0030455E /* SharedStyleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedStyleView.h; sourceTree = "<group>"; };
+		AB76C68F1EB1BAAB0030455E /* SharedStyleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedStyleView.m; sourceTree = "<group>"; };
+		AB76C6911EB1EB430030455E /* ShareCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCollectionViewCell.h; sourceTree = "<group>"; };
+		AB76C6921EB1EB430030455E /* ShareCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCollectionViewCell.m; sourceTree = "<group>"; };
 		AB7E69821E88A17700B6F77E /* DMImageBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImageBrowserView.h; sourceTree = "<group>"; };
 		AB7E69831E88A17700B6F77E /* DMImageBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImageBrowserView.m; sourceTree = "<group>"; };
 		AB7E69851E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImageBroswerCollectionViewCell.h; sourceTree = "<group>"; };
@@ -600,6 +606,10 @@
 				AB557CB41EB07E1300D01C32 /* SnailQuickMaskPopups.m */,
 				AB557CB61EB0813900D01C32 /* CustomizedAlertView.h */,
 				AB557CB71EB0813900D01C32 /* CustomizedAlertView.m */,
+				AB76C68E1EB1BAAB0030455E /* SharedStyleView.h */,
+				AB76C68F1EB1BAAB0030455E /* SharedStyleView.m */,
+				AB76C6911EB1EB430030455E /* ShareCollectionViewCell.h */,
+				AB76C6921EB1EB430030455E /* ShareCollectionViewCell.m */,
 			);
 			name = MaskView;
 			sourceTree = "<group>";
@@ -1755,6 +1765,7 @@
 				B249EF0F1E6A54F8000FF15B /* MASConstraint.m in Sources */,
 				AB557CAC1EB06B1800D01C32 /* MultiMaskViewController.m in Sources */,
 				AB9600E81EA9E492008FAB13 /* MJType.m in Sources */,
+				AB76C6931EB1EB430030455E /* ShareCollectionViewCell.m in Sources */,
 				B249EF021E6A54F8000FF15B /* IQUITextFieldView+Additions.m in Sources */,
 				B249EF091E6A54F8000FF15B /* IQBarButtonItem.m in Sources */,
 				B2603C5A1E6FA26000CE572A /* PrivateViewController.m in Sources */,
@@ -1805,6 +1816,7 @@
 				AB73AAB01E85146900685A52 /* DMImageBrowserViewController.m in Sources */,
 				B2603C3F1E6EB3EB00CE572A /* AdvertiseViewController.m in Sources */,
 				AB9600EA1EA9E492008FAB13 /* NSObject+MJCoding.m in Sources */,
+				AB76C6901EB1BAAB0030455E /* SharedStyleView.m in Sources */,
 				AB9600E31EA9E492008FAB13 /* MJConst.m in Sources */,
 				B21322A41E684165000E73CD /* AppDelegateViewController.m in Sources */,
 				AB91253D1EAD964B006D7248 /* UIImageView+HighlightedWebCache.m in Sources */,

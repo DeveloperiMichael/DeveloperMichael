@@ -121,7 +121,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        _titleLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:20]];
+        _titleLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:17.0]];
         _titleLabel.text = _title;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = kColorByRGB(0, 0, 0, 1);
@@ -132,7 +132,7 @@
 - (UILabel *)contentLabel {
     if (!_contentLabel) {
         _contentLabel = [[UILabel alloc] init];
-        _contentLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:15.0]];
+        _contentLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:16.0]];
         _contentLabel.text = _content;
         _contentLabel.textAlignment = NSTextAlignmentCenter;
         _contentLabel.numberOfLines = 0;
@@ -162,7 +162,7 @@
         _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_leftButton setTitleColor:kColorByRGB(252, 109, 54, 1) forState:UIControlStateNormal];
         [_leftButton setTitle:_leftButtonTitle forState:UIControlStateNormal];
-        _leftButton.titleLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:20.0]];
+        _leftButton.titleLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:17.0]];
         [_leftButton addTarget:self action:@selector(leftButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _leftButton;
@@ -173,7 +173,7 @@
         _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_rightButton setTitleColor:kColorByRGB(252, 109, 54, 1) forState:UIControlStateNormal];
         [_rightButton setTitle:_rightButtonTitle forState:UIControlStateNormal];
-        _rightButton.titleLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:20.0]];
+        _rightButton.titleLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:17.0]];
         [_rightButton addTarget:self action:@selector(rightButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _rightButton;

@@ -10,6 +10,8 @@
 #import "HomeView.h"
 #import "CustomizedAlertView.h"
 #import "SnailQuickMaskPopups.h"
+#import "SharedStyleView.h"
+
 @interface MultiMaskViewController ()<BaseViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) HomeView *multiMaskView;
@@ -91,14 +93,40 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    CustomizedAlertView *alert = [[CustomizedAlertView alloc] initWithTitle:@"温馨提示" message:@"确定订购该项VIP服务" leftButtonTitle:@"取消" leftButtonBlock:^{
-        NSLog(@"----leftButtonBlock------");
-    } rightButtonTitle:@"确定" rightButtonBlock:^{
-        NSLog(@"----rightButtonBlock------");
-    }];
-    [alert presentAlertViewAnimated:YES completion:^{
-        NSLog(@"----presentAlertViewAnimated------");
-    }];
+    switch (indexPath.row) {
+        case 0:
+        {
+            CustomizedAlertView *alert = [[CustomizedAlertView alloc] initWithTitle:@"温馨提示" message:@"确定订购该项VIP服务？" leftButtonTitle:@"取消" leftButtonBlock:^{
+                NSLog(@"----leftButtonBlock------");
+            } rightButtonTitle:@"确定" rightButtonBlock:^{
+                NSLog(@"----rightButtonBlock------");
+            }];
+            [alert presentAlertViewAnimated:YES completion:^{
+                NSLog(@"----presentAlertViewAnimated------");
+            }];
+
+        }
+            break;
+        case 1:
+        {
+            SharedStyleView *alert = [[SharedStyleView alloc] init];
+            [alert show];
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            
+        }
+            break;
+        default:
+            break;
+    }
+    
 }
 
 
