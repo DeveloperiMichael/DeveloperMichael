@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^CustomizedAlertBlock)();
+
 @interface CustomizedAlertView : UIView
 
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)content
+              leftButtonTitle:(NSString *)leftTitle
+              leftButtonBlock:(CustomizedAlertBlock)leftBlock
+             rightButtonTitle:(NSString *)rightTitle
+             rightButtonBlock:(CustomizedAlertBlock)rightBlock;
 
-- (void)showAlertView;
-- (void)hideAlertView;
+- (void)presentAlertViewAnimated:(BOOL)animated completion:(CustomizedAlertBlock)completion;
+- (void)dismissAlertViewAnimated:(BOOL)animated completion:(CustomizedAlertBlock)completion;
 
 @end

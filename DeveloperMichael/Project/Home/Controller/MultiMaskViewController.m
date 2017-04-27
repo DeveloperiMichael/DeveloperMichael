@@ -91,8 +91,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    CustomizedAlertView *view = [[CustomizedAlertView alloc] init];
-    [view showAlertView];
+    CustomizedAlertView *alert = [[CustomizedAlertView alloc] initWithTitle:@"温馨提示" message:@"确定订购该项VIP服务" leftButtonTitle:@"取消" leftButtonBlock:^{
+        NSLog(@"----leftButtonBlock------");
+    } rightButtonTitle:@"确定" rightButtonBlock:^{
+        NSLog(@"----rightButtonBlock------");
+    }];
+    [alert presentAlertViewAnimated:YES completion:^{
+        NSLog(@"----presentAlertViewAnimated------");
+    }];
 }
 
 
