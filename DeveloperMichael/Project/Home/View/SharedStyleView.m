@@ -59,7 +59,7 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [_popups dismissAnimated:YES completion:nil];
 }
 
 
@@ -70,7 +70,9 @@
     [_popups presentAnimated:YES completion:nil];
 }
 
-
+- (void)cancelButtonPressed:(UIButton *)button {
+    [_popups dismissAnimated:YES completion:nil];
+}
 #pragma mark-
 #pragma mark- Private Methods
 
@@ -118,6 +120,7 @@
         _cancelButton.titleLabel.font = [UIFont systemFontOfSize:[StringUtil GetFontSizeByScreenWidth:18.0]];
         [_cancelButton setTitle:@"取  消" forState:UIControlStateNormal];
         [_cancelButton setTitleColor:kColorByRGB(0, 0, 0, 1) forState:UIControlStateNormal];
+        [_cancelButton addTarget:self action:@selector(cancelButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _cancelButton;
 }
