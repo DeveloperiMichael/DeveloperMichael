@@ -10,7 +10,7 @@
 #import "HomeView.h"
 #import "CustomizedAlertView.h"
 #import "SnailQuickMaskPopups.h"
-#import "SharedStyleView.h"
+#import "SharedViewController.h"
 
 @interface MultiMaskViewController ()<BaseViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -109,8 +109,8 @@
             break;
         case 1:
         {
-            SharedStyleView *alert = [[SharedStyleView alloc] init];
-            [alert show];
+            SharedViewController *alert = [[SharedViewController alloc] init];
+            [alert.sharedView show];
         }
             break;
         case 2:

@@ -12,6 +12,9 @@
 #import "MultipleCollectionViewController.h"
 #import "MultiMaskViewController.h"
 #import "TimerManagerObject.h"
+#import "CalendarViewController.h"
+
+
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) HomeView *homeView;
@@ -104,6 +107,9 @@
         case 2:
             vc = [[MultiMaskViewController alloc] init];
             break;
+        case 3:
+            vc = [[CalendarViewController alloc] init];
+            break;
         default:
             break;
     }
@@ -136,7 +142,7 @@
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType",@"UICollectionViewType",@"MultiMaskViewType", nil];
+        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType",@"UICollectionViewType",@"MultiMaskViewType",@"Calendar", nil];
     }
     return _titleArray;
 }

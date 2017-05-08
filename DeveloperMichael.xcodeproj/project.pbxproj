@@ -16,6 +16,7 @@
 		AB557CBB1EB09C2600D01C32 /* CALayer+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB557CBA1EB09C2600D01C32 /* CALayer+Layout.m */; };
 		AB59795A1E9721E400E8F9B6 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5979591E9721E400E8F9B6 /* CircleProgressView.m */; };
 		AB5979601E9772C600E8F9B6 /* WaveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59795F1E9772C600E8F9B6 /* WaveProgressView.m */; };
+		AB6525EB1EB2CF9A0021C702 /* SharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6525EA1EB2CF9A0021C702 /* SharedViewController.m */; };
 		AB696EB11E7FC72D008E1041 /* DMImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB696EB01E7FC72D008E1041 /* DMImagePickerViewController.m */; };
 		AB696EB41E7FC82D008E1041 /* DMImagePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB696EB31E7FC82D008E1041 /* DMImagePickerView.m */; };
 		AB730C281E7A6E7E00D42FD9 /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB730C271E7A6E7E00D42FD9 /* HomeView.m */; };
@@ -31,6 +32,9 @@
 		AB7E69871E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7E69861E88EC8600B6F77E /* DMImageBroswerCollectionViewCell.m */; };
 		AB823AC81E8360C200B8E3ED /* PHAsset+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AB823AC71E8360C200B8E3ED /* PHAsset+Extension.m */; };
 		AB823ACB1E836AAD00B8E3ED /* DMPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB823ACA1E836AAD00B8E3ED /* DMPhotoBrowser.m */; };
+		AB8441941EC04DD700535669 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8441931EC04DD700535669 /* CalendarViewController.m */; };
+		AB8441971EC04E2B00535669 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8441961EC04E2B00535669 /* CalendarView.m */; };
+		AB84419A1EC050E700535669 /* CalendarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8441991EC050E700535669 /* CalendarContentView.m */; };
 		AB8FE4311E8F4460008438BB /* CALayerProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FE4301E8F4460008438BB /* CALayerProgressViewController.m */; };
 		AB8FE4341E8F4490008438BB /* CALayerProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FE4331E8F4490008438BB /* CALayerProgressView.m */; };
 		AB8FE4371E8F7176008438BB /* LoadProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FE4361E8F7176008438BB /* LoadProgressView.m */; };
@@ -246,6 +250,8 @@
 		AB5979591E9721E400E8F9B6 /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
 		AB59795E1E9772C500E8F9B6 /* WaveProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveProgressView.h; sourceTree = "<group>"; };
 		AB59795F1E9772C600E8F9B6 /* WaveProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveProgressView.m; sourceTree = "<group>"; };
+		AB6525E91EB2CF9A0021C702 /* SharedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedViewController.h; path = ../View/SharedViewController.h; sourceTree = "<group>"; };
+		AB6525EA1EB2CF9A0021C702 /* SharedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedViewController.m; path = ../View/SharedViewController.m; sourceTree = "<group>"; };
 		AB696EAF1E7FC72D008E1041 /* DMImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImagePickerViewController.h; sourceTree = "<group>"; };
 		AB696EB01E7FC72D008E1041 /* DMImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImagePickerViewController.m; sourceTree = "<group>"; };
 		AB696EB21E7FC82D008E1041 /* DMImagePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImagePickerView.h; sourceTree = "<group>"; };
@@ -276,6 +282,12 @@
 		AB823AC71E8360C200B8E3ED /* PHAsset+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+Extension.m"; sourceTree = "<group>"; };
 		AB823AC91E836AAD00B8E3ED /* DMPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPhotoBrowser.h; sourceTree = "<group>"; };
 		AB823ACA1E836AAD00B8E3ED /* DMPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPhotoBrowser.m; sourceTree = "<group>"; };
+		AB8441921EC04DD700535669 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		AB8441931EC04DD700535669 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		AB8441951EC04E2B00535669 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		AB8441961EC04E2B00535669 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		AB8441981EC050E700535669 /* CalendarContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarContentView.h; sourceTree = "<group>"; };
+		AB8441991EC050E700535669 /* CalendarContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarContentView.m; sourceTree = "<group>"; };
 		AB8FE42F1E8F4460008438BB /* CALayerProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerProgressViewController.h; sourceTree = "<group>"; };
 		AB8FE4301E8F4460008438BB /* CALayerProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerProgressViewController.m; sourceTree = "<group>"; };
 		AB8FE4321E8F4490008438BB /* CALayerProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerProgressView.h; sourceTree = "<group>"; };
@@ -619,6 +631,8 @@
 			children = (
 				AB557CAA1EB06B1800D01C32 /* MultiMaskViewController.h */,
 				AB557CAB1EB06B1800D01C32 /* MultiMaskViewController.m */,
+				AB6525E91EB2CF9A0021C702 /* SharedViewController.h */,
+				AB6525EA1EB2CF9A0021C702 /* SharedViewController.m */,
 			);
 			name = MaskViewController;
 			sourceTree = "<group>";
@@ -637,6 +651,7 @@
 		AB730C101E7A6D3900D42FD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AB8441911EC04D7600535669 /* Calendar */,
 				AB557CA91EB06A9500D01C32 /* MaskViewController */,
 				AB74BAC61E9B5F3700DDF16A /* CollectionViewController */,
 				AB74BAC41E9B5EE300DDF16A /* AnimationViewConreoller */,
@@ -663,6 +678,7 @@
 		AB730C131E7A6D3900D42FD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB84419B1EC050F700535669 /* CalendarView */,
 				AB557CA81EB06A2C00D01C32 /* MaskView */,
 				AB9600B61EA99F40008FAB13 /* CollectionView */,
 				AB74BAC51E9B5F0700DDF16A /* AnimationView */,
@@ -831,6 +847,26 @@
 				ABBD7C641EAF2EF4001ED00B /* TanTanCardSlideViewController.m */,
 			);
 			name = CollectionViewController;
+			sourceTree = "<group>";
+		};
+		AB8441911EC04D7600535669 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				AB8441921EC04DD700535669 /* CalendarViewController.h */,
+				AB8441931EC04DD700535669 /* CalendarViewController.m */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		AB84419B1EC050F700535669 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				AB8441951EC04E2B00535669 /* CalendarView.h */,
+				AB8441961EC04E2B00535669 /* CalendarView.m */,
+				AB8441981EC050E700535669 /* CalendarContentView.h */,
+				AB8441991EC050E700535669 /* CalendarContentView.m */,
+			);
+			name = CalendarView;
 			sourceTree = "<group>";
 		};
 		AB91250F1EAD964B006D7248 /* SDWebImage */ = {
@@ -1723,6 +1759,7 @@
 				B249EF441E6A54F9000FF15B /* SAButton.m in Sources */,
 				B249EF421E6A54F9000FF15B /* NSObject+YYModel.m in Sources */,
 				B249EF171E6A54F8000FF15B /* ViewController+MASAdditions.m in Sources */,
+				AB8441941EC04DD700535669 /* CalendarViewController.m in Sources */,
 				AB9600B91EA99FFC008FAB13 /* WaterFlowCollectionViewController.m in Sources */,
 				AB730C311E7A8FD300D42FD9 /* CABasicAnimationView.m in Sources */,
 				B21322AF1E6845B1000E73CD /* LoginViewController.m in Sources */,
@@ -1788,6 +1825,7 @@
 				B2BCAC941E6FF4B900CCD217 /* PublishViewController.m in Sources */,
 				AB91253E1EAD964B006D7248 /* UIImageView+WebCache.m in Sources */,
 				AB557CB21EB0731A00D01C32 /* MultiMaskView.m in Sources */,
+				AB84419A1EC050E700535669 /* CalendarContentView.m in Sources */,
 				B21322A51E684165000E73CD /* BaseView.m in Sources */,
 				AB59795A1E9721E400E8F9B6 /* CircleProgressView.m in Sources */,
 				B249EF111E6A54F8000FF15B /* MASLayoutConstraint.m in Sources */,
@@ -1824,12 +1862,14 @@
 				B249EF081E6A54F8000FF15B /* IQTextView.m in Sources */,
 				B249EF531E6AB6AF000FF15B /* UIViewController+HUD.m in Sources */,
 				B204B32D1E68599A009A5936 /* LoginView.m in Sources */,
+				AB8441971EC04E2B00535669 /* CalendarView.m in Sources */,
 				AB730C281E7A6E7E00D42FD9 /* HomeView.m in Sources */,
 				AB696EB11E7FC72D008E1041 /* DMImagePickerViewController.m in Sources */,
 				AB9125351EAD964B006D7248 /* SDWebImageDecoder.m in Sources */,
 				AB9600E61EA9E492008FAB13 /* MJMember.m in Sources */,
 				AB9600EF1EA9E7EC008FAB13 /* CommodityCollectionViewCell.m in Sources */,
 				AB9125311EAD964B006D7248 /* README.md in Sources */,
+				AB6525EB1EB2CF9A0021C702 /* SharedViewController.m in Sources */,
 				AB9125321EAD964B006D7248 /* NSData+ImageContentType.m in Sources */,
 				AB8FE4311E8F4460008438BB /* CALayerProgressViewController.m in Sources */,
 				B2603C5D1E6FB59900CE572A /* DaliyLifeView.m in Sources */,

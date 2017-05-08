@@ -80,7 +80,7 @@
     _popups = [SnailQuickMaskPopups popupsWithMaskStyle:MaskStyleBlackTranslucent aView:self];
     _popups.presentationStyle = PresentationStyleBottom;
     _popups.isAllowPopupsDrag = YES;
-    _popups.dampingRatio = 0.5;
+    _popups.dampingRatio = 1.0;
 }
 
 
