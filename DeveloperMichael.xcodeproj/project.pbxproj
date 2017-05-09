@@ -35,6 +35,7 @@
 		AB8441941EC04DD700535669 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8441931EC04DD700535669 /* CalendarViewController.m */; };
 		AB8441971EC04E2B00535669 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8441961EC04E2B00535669 /* CalendarView.m */; };
 		AB84419A1EC050E700535669 /* CalendarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8441991EC050E700535669 /* CalendarContentView.m */; };
+		AB84419E1EC1756300535669 /* CalendarCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84419D1EC1756300535669 /* CalendarCollectionViewCell.m */; };
 		AB8FE4311E8F4460008438BB /* CALayerProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FE4301E8F4460008438BB /* CALayerProgressViewController.m */; };
 		AB8FE4341E8F4490008438BB /* CALayerProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FE4331E8F4490008438BB /* CALayerProgressView.m */; };
 		AB8FE4371E8F7176008438BB /* LoadProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FE4361E8F7176008438BB /* LoadProgressView.m */; };
@@ -288,6 +289,8 @@
 		AB8441961EC04E2B00535669 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
 		AB8441981EC050E700535669 /* CalendarContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarContentView.h; sourceTree = "<group>"; };
 		AB8441991EC050E700535669 /* CalendarContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarContentView.m; sourceTree = "<group>"; };
+		AB84419C1EC1756300535669 /* CalendarCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarCollectionViewCell.h; path = ../../TabBarController/Controller/CalendarCollectionViewCell.h; sourceTree = "<group>"; };
+		AB84419D1EC1756300535669 /* CalendarCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarCollectionViewCell.m; path = ../../TabBarController/Controller/CalendarCollectionViewCell.m; sourceTree = "<group>"; };
 		AB8FE42F1E8F4460008438BB /* CALayerProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerProgressViewController.h; sourceTree = "<group>"; };
 		AB8FE4301E8F4460008438BB /* CALayerProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerProgressViewController.m; sourceTree = "<group>"; };
 		AB8FE4321E8F4490008438BB /* CALayerProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerProgressView.h; sourceTree = "<group>"; };
@@ -865,6 +868,8 @@
 				AB8441961EC04E2B00535669 /* CalendarView.m */,
 				AB8441981EC050E700535669 /* CalendarContentView.h */,
 				AB8441991EC050E700535669 /* CalendarContentView.m */,
+				AB84419C1EC1756300535669 /* CalendarCollectionViewCell.h */,
+				AB84419D1EC1756300535669 /* CalendarCollectionViewCell.m */,
 			);
 			name = CalendarView;
 			sourceTree = "<group>";
@@ -1792,6 +1797,7 @@
 				AB557CBB1EB09C2600D01C32 /* CALayer+Layout.m in Sources */,
 				B21322A61E684165000E73CD /* BaseViewController.m in Sources */,
 				AB73AAAD1E84F6FE00685A52 /* DateUtil.m in Sources */,
+				AB84419E1EC1756300535669 /* CalendarCollectionViewCell.m in Sources */,
 				B249EF501E6A6745000FF15B /* pinyin.c in Sources */,
 				B2603C571E6FA26000CE572A /* HomeViewController.m in Sources */,
 				AB9125391EAD964B006D7248 /* SDWebImagePrefetcher.m in Sources */,

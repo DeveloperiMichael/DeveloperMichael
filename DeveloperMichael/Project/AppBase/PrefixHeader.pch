@@ -15,6 +15,7 @@
 #import "UIView+ViewFrameGeometry.h"
 #import "UIViewController+HUD.h"
 #import "StringUtil.h"
+#import "DateUtil.h"
 #import "TimerManagerObject.h"
 #import "CALayer+AnimationExtension.h"
 #import "UIImage+SAUImageHandle.h"

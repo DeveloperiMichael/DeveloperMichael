@@ -10,6 +10,7 @@
 
 @interface CalendarContentView : UIView
 
+@property (nonatomic, strong) UICollectionView *calendarCollectionView;
 @property (nonatomic, strong) UICollectionView *contentCollectionView;
 
 @end

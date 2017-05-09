@@ -85,7 +85,7 @@ typedef NS_ENUM(NSInteger, CommonStringType) {
 /** 将汉字首字母转成拼音个 */
 + (NSString *)transformChineseToPinyin:(NSString *)string;
 
-/** 将汉字首字母转成拼音个 */
+/** 检查字符串 */
 + (BOOL)isStringType:(CommonStringType)stringType checkString:(NSString *)string;
 
 /** 字符串显示需要的高度 */
@@ -96,5 +96,6 @@ typedef NS_ENUM(NSInteger, CommonStringType) {
 
 /** 根据屏幕适配字体大小 */
 +(CGFloat)GetFontSizeByScreenWidth:(CGFloat)FontSize;
+
 
 @end

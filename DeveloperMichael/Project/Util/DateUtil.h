@@ -67,4 +67,21 @@
 + (NSDate *)dateFromComponents:(NSDateComponents *)comps;
 
 
+/**
+ 获取某一天当月天数
+
+ @param date 参数（某一天）
+ @return 当月几天
+ */
++ (NSInteger)numberOfDaysInMonthWithDate:(NSDate *)date;
+
+
+
+/**
+ 日期转化为星期
+
+ @param inputDate 要转化的日期
+ @return 星期几 周几
+ */
++ (NSString*)weekdayStringFromDate:(NSDate*)inputDate;
 @end
