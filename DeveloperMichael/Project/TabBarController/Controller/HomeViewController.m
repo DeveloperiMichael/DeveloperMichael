@@ -142,7 +142,7 @@
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType",@"UICollectionViewType",@"MultiMaskViewType",@"Calendar", nil];
+        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType",@"UICollectionViewType",@"MultiMaskViewType",@"Calendar",@"AliPay", nil];
     }
     return _titleArray;
 }

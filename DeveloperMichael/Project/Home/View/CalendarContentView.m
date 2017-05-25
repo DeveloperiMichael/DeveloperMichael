@@ -57,7 +57,6 @@
         layout.minimumInteritemSpacing = 0;
         layout.minimumLineSpacing = 0;
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        _calendarCollectionView.bounces = NO;
         _calendarCollectionView.tag = 100;
         _calendarCollectionView.showsHorizontalScrollIndicator = NO;
     }
@@ -74,7 +73,6 @@
         layout.minimumInteritemSpacing = 0;
         layout.minimumLineSpacing = 0;
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        _contentCollectionView.bounces = NO;
         _contentCollectionView.tag = 200;
     }
     return _contentCollectionView;

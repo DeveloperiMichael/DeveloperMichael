@@ -9,11 +9,12 @@
 #import "CalendarViewController.h"
 #import "CalendarView.h"
 #import "CalendarCollectionViewCell.h"
+#import "XZMRefresh.h"
 @interface CalendarViewController ()<BaseViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic, strong) CalendarView *calendarView;
 @property (nonatomic, strong) NSMutableArray *dateArray;
-//@property (nonatomic, strong)
+@property (nonatomic, strong) NSDate *currentPageDate;
 
 @end
 
@@ -27,7 +28,8 @@
     // Do any additional setup after loading the view.
     
     _dateArray = [NSMutableArray array];
-    [_dateArray addObjectsFromArray:[self monthDatesWithDate:[NSDate date]]];
+    _currentPageDate = [NSDate date];
+    [_dateArray addObjectsFromArray:[self monthDatesWithDate:_currentPageDate]];
     
     [self setupSubviewsContraints];
 }
@@ -66,7 +68,7 @@
         case 100:
         {
             CalendarCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CalendarCollectionViewCell" forIndexPath:indexPath];
-            NSDate *date = [DateUtil dateFromString:_dateArray[indexPath.row] withDateFormat:@"yyyy-MM-dd"];
+            NSDate *date = [DateUtil dateFromString:_dateArray[indexPath.section] withDateFormat:@"yyyy-MM-dd"];
             NSString *dateString = [DateUtil stringFromDate:date withDateFormat:@"MM-dd"];
             NSString *weekString = [DateUtil weekdayStringFromDate:date];
             cell.title = [NSString stringWithFormat:@"%@///%@",dateString,weekString];
@@ -91,6 +93,8 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"-----%ld----",indexPath.row);
 }
+
+
 
 #pragma mark-
 #pragma mark- delegate
@@ -141,6 +145,8 @@
         _calendarView.calendarContentView.calendarCollectionView.delegate = self;
         _calendarView.calendarContentView.calendarCollectionView.dataSource = self;
         [_calendarView.calendarContentView.calendarCollectionView registerClass:[CalendarCollectionViewCell class] forCellWithReuseIdentifier:@"CalendarCollectionViewCell"];
+        
+        
     }
     return _calendarView;
 }
