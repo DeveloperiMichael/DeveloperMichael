@@ -82,7 +82,9 @@ static NSInteger const kResetVertifyCodeTime = 60;
 #pragma mark-
 #pragma mark- Event response
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+}
 
 
 #pragma mark-

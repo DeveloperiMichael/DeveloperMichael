@@ -62,7 +62,7 @@
 
 - (UIImageView *)bgImageView {
     if (!_bgImageView) {
-        _bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.jpg"]];
+        _bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ads2"]];
     }
     return _bgImageView;
 }

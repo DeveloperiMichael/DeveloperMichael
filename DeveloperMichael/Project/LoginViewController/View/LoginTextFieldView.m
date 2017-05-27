@@ -51,6 +51,10 @@
 #pragma mark-
 #pragma mark- Private Methods
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+}
+
 - (UITextField *)textFieldWithLeftIcon:(NSString *)leftIcon placeholder:(NSString *)placeholder
 
 {

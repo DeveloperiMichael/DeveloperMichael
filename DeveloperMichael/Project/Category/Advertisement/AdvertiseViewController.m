@@ -108,8 +108,9 @@ static NSInteger const kAdvertiseCountTime = 5;
     if (!_advertiseView) {
         _advertiseView = [[BaseView alloc] init];
         _advertiseView.navBarView.hidden = YES;
-        _advertiseView.bgImageView.backgroundColor = [UIColor yellowColor];
-        _advertiseView.bgImageView.image = [UIImage imageNamed:@"kobe.PNG"];
+        int index = arc4random()%5+1;
+        _advertiseView.bgImageView.backgroundColor = [UIColor brownColor];
+        _advertiseView.bgImageView.image = [UIImage imageNamed:@"ads1"];//[UIImage imageNamed:[NSString stringWithFormat:@"ads%d.png",index]];
     }
     return _advertiseView;
 }

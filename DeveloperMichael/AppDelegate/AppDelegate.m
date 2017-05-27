@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "IQKeyboardManager.h"
-
+#import "TalkingData.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +20,11 @@
     
     self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
+    
+    //[TalkingData sessionStarted:@"AF8D44C5FDED4EC3823F2154E93AF40A" withChannelId:@"123456789"];
+    
+    //[TalkingData trackEvent:@"8511033a8fc7401a879679dad602cac0"];
+    
     //配置推送
     [self setupPushWithLaunchOptions:launchOptions];
     
