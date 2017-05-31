@@ -70,6 +70,15 @@ static NSInteger const kAdvertiseCountTime = 5;
 #pragma mark-
 #pragma mark- Private Methods
 
+-(UIImage *)advertiseImage
+{
+    //获取路径
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"AdvertiseImage" ofType:@"bundle"];
+    int index = arc4random()%5+1;
+    return [UIImage imageWithContentsOfFile:[[path stringByAppendingPathComponent:@"adsImage"] stringByAppendingPathComponent:[NSString stringWithFormat:@"ads%d.png",index]]];
+    
+}
+
 //GCD倒计时
 -(void)timeCount{
     dispatch_queue_t queue=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -108,9 +117,7 @@ static NSInteger const kAdvertiseCountTime = 5;
     if (!_advertiseView) {
         _advertiseView = [[BaseView alloc] init];
         _advertiseView.navBarView.hidden = YES;
-        int index = arc4random()%5+1;
-        _advertiseView.bgImageView.backgroundColor = [UIColor brownColor];
-        _advertiseView.bgImageView.image = [UIImage imageNamed:@"ads1"];//[UIImage imageNamed:[NSString stringWithFormat:@"ads%d.png",index]];
+        _advertiseView.bgImageView.image = [self advertiseImage];
     }
     return _advertiseView;
 }
@@ -118,13 +125,11 @@ static NSInteger const kAdvertiseCountTime = 5;
 - (UIButton *)countButton {
     if (!_countButton) {
         _countButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _countButton.backgroundColor = kColorByRGB(153, 153, 153, 0.5);
-        [_countButton setTitleColor:kColorByRGB(200, 200, 200, 1) forState:UIControlStateNormal];
+        _countButton.backgroundColor = kColorByRGB(0, 0, 0, 0.3);
+        [_countButton setTitleColor:kColorByRGB(255, 255, 255, 1) forState:UIControlStateNormal];
         [_countButton addTarget:self action:@selector(startLoadLoginViewController) forControlEvents:UIControlEventTouchUpInside];
         _countButton.layer.masksToBounds = YES;
         _countButton.layer.cornerRadius = 4;
-        _countButton.layer.borderWidth = 1;
-        _countButton.layer.borderColor = [kColorByRGB(25, 25, 25, 1) CGColor];
     }
     return _countButton;
 }
@@ -141,7 +146,7 @@ static NSInteger const kAdvertiseCountTime = 5;
     [_countButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-kScreenWidthRatio(15));
         make.top.mas_equalTo(kScreenHeightRatio(30));
-        make.width.mas_equalTo(kScreenWidthRatio(60));
+        make.width.mas_equalTo(kScreenWidthRatio(66));
         make.height.mas_equalTo(kScreenWidthRatio(30));
     }];
 }

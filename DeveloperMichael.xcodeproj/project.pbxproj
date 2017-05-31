@@ -22,11 +22,7 @@
 		AB581B2B1ED82BE1007CF89D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB581B2A1ED82BE1007CF89D /* SystemConfiguration.framework */; };
 		AB581B2D1ED82BED007CF89D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB581B2C1ED82BED007CF89D /* libz.tbd */; };
 		AB581B2F1ED82BF9007CF89D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB581B2E1ED82BF9007CF89D /* libc++.tbd */; };
-		AB581B351ED964A6007CF89D /* ads2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB581B311ED964A6007CF89D /* ads2.png */; };
-		AB581B361ED964A6007CF89D /* ads3.png in Resources */ = {isa = PBXBuildFile; fileRef = AB581B321ED964A6007CF89D /* ads3.png */; };
-		AB581B371ED964A6007CF89D /* ads4.png in Resources */ = {isa = PBXBuildFile; fileRef = AB581B331ED964A6007CF89D /* ads4.png */; };
-		AB581B381ED964A6007CF89D /* ads5.png in Resources */ = {isa = PBXBuildFile; fileRef = AB581B341ED964A6007CF89D /* ads5.png */; };
-		AB581B3A1ED9668F007CF89D /* ads1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB581B391ED9668F007CF89D /* ads1.png */; };
+		AB581B471EDEC0E7007CF89D /* AdvertiseImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AB581B461EDEC0E7007CF89D /* AdvertiseImage.bundle */; };
 		AB59795A1E9721E400E8F9B6 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5979591E9721E400E8F9B6 /* CircleProgressView.m */; };
 		AB5979601E9772C600E8F9B6 /* WaveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59795F1E9772C600E8F9B6 /* WaveProgressView.m */; };
 		AB6525EB1EB2CF9A0021C702 /* SharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6525EA1EB2CF9A0021C702 /* SharedViewController.m */; };
@@ -300,11 +296,7 @@
 		AB581B2A1ED82BE1007CF89D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AB581B2C1ED82BED007CF89D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AB581B2E1ED82BF9007CF89D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		AB581B311ED964A6007CF89D /* ads2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ads2.png; sourceTree = "<group>"; };
-		AB581B321ED964A6007CF89D /* ads3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ads3.png; sourceTree = "<group>"; };
-		AB581B331ED964A6007CF89D /* ads4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ads4.png; sourceTree = "<group>"; };
-		AB581B341ED964A6007CF89D /* ads5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ads5.png; sourceTree = "<group>"; };
-		AB581B391ED9668F007CF89D /* ads1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ads1.png; sourceTree = "<group>"; };
+		AB581B461EDEC0E7007CF89D /* AdvertiseImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AdvertiseImage.bundle; sourceTree = "<group>"; };
 		AB5979581E9721E400E8F9B6 /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
 		AB5979591E9721E400E8F9B6 /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
 		AB59795E1E9772C500E8F9B6 /* WaveProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveProgressView.h; sourceTree = "<group>"; };
@@ -781,18 +773,6 @@
 				AB581B221ED82BA6007CF89D /* AdSupport.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AB581B301ED9635A007CF89D /* adsImage */ = {
-			isa = PBXGroup;
-			children = (
-				AB581B391ED9668F007CF89D /* ads1.png */,
-				AB581B311ED964A6007CF89D /* ads2.png */,
-				AB581B321ED964A6007CF89D /* ads3.png */,
-				AB581B331ED964A6007CF89D /* ads4.png */,
-				AB581B341ED964A6007CF89D /* ads5.png */,
-			);
-			name = adsImage;
 			sourceTree = "<group>";
 		};
 		AB730C0F1E7A6D3900D42FD9 /* Home */ = {
@@ -1464,6 +1444,7 @@
 				AB9F3ED81E9F10E100498BB7 /* Info.plist */,
 				AB9F3ED91E9F10E100498BB7 /* main.m */,
 				B2092AED1E55704100DAB49B /* Assets.xcassets */,
+				AB581B461EDEC0E7007CF89D /* AdvertiseImage.bundle */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1785,7 +1766,6 @@
 		B2603C3C1E6EB31000CE572A /* Advertisement */ = {
 			isa = PBXGroup;
 			children = (
-				AB581B301ED9635A007CF89D /* adsImage */,
 				B2603C451E6EE5D600CE572A /* home.png */,
 				B2603C3D1E6EB3EB00CE572A /* AdvertiseViewController.h */,
 				B2603C3E1E6EB3EB00CE572A /* AdvertiseViewController.m */,
@@ -1993,6 +1973,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB9F3F531E9F10FD00498BB7 /* BootAnimation42.png in Resources */,
+				AB581B471EDEC0E7007CF89D /* AdvertiseImage.bundle in Resources */,
 				AB9F3F6E1E9F10FD00498BB7 /* BootAnimation67.png in Resources */,
 				AB91250B1EAD93EC006D7248 /* 1.plist in Resources */,
 				AB9F3F711E9F10FD00498BB7 /* BootAnimation7.png in Resources */,
@@ -2023,8 +2004,6 @@
 				AB9F3F731E9F10FD00498BB7 /* BootAnimation71.png in Resources */,
 				AB9F3F701E9F10FD00498BB7 /* BootAnimation69.png in Resources */,
 				AB9F3F781E9F10FD00498BB7 /* BootAnimation76.png in Resources */,
-				AB581B361ED964A6007CF89D /* ads3.png in Resources */,
-				AB581B3A1ED9668F007CF89D /* ads1.png in Resources */,
 				AB8442281EC2EBC400535669 /* XZMRefresh.bundle in Resources */,
 				AB9F3F3A1E9F10FD00498BB7 /* BootAnimation2.png in Resources */,
 				AB9F3F551E9F10FD00498BB7 /* BootAnimation44.png in Resources */,
@@ -2037,7 +2016,6 @@
 				AB9F3F571E9F10FD00498BB7 /* BootAnimation46.png in Resources */,
 				AB9F3F611E9F10FD00498BB7 /* BootAnimation55.png in Resources */,
 				AB9F3F4D1E9F10FD00498BB7 /* BootAnimation37.png in Resources */,
-				AB581B351ED964A6007CF89D /* ads2.png in Resources */,
 				AB9F3F791E9F10FD00498BB7 /* BootAnimation77.png in Resources */,
 				AB9F3F3F1E9F10FD00498BB7 /* BootAnimation24.png in Resources */,
 				AB9F3F661E9F10FD00498BB7 /* BootAnimation6.png in Resources */,
@@ -2064,7 +2042,6 @@
 				AB91250E1EAD93EC006D7248 /* 4.plist in Resources */,
 				AB9F3F301E9F10FD00498BB7 /* BootAnimation10.png in Resources */,
 				AB9F3F501E9F10FD00498BB7 /* BootAnimation4.png in Resources */,
-				AB581B371ED964A6007CF89D /* ads4.png in Resources */,
 				AB9F3F7A1E9F10FD00498BB7 /* BootAnimation78.png in Resources */,
 				AB9F3F4C1E9F10FD00498BB7 /* BootAnimation36.png in Resources */,
 				AB9F3F311E9F10FD00498BB7 /* BootAnimation11.png in Resources */,
@@ -2078,7 +2055,6 @@
 				AB9F3F641E9F10FD00498BB7 /* BootAnimation58.png in Resources */,
 				AB9F3F5C1E9F10FD00498BB7 /* BootAnimation50.png in Resources */,
 				B249EF411E6A54F9000FF15B /* LICENSE in Resources */,
-				AB581B381ED964A6007CF89D /* ads5.png in Resources */,
 				AB966A861E82754A0028D91D /* MBProgressHUD.bundle in Resources */,
 				AB9125301EAD964B006D7248 /* LICENSE in Resources */,
 				AB9F3F3E1E9F10FD00498BB7 /* BootAnimation23.png in Resources */,
