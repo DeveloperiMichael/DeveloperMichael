@@ -130,4 +130,17 @@ typedef NS_ENUM(NSInteger,ImageClipStyle) {
                     stringRect:(CGRect)strRect
                stringAttribute:(NSDictionary *)attribute;
 
+
+
+/**
+ 将颜色装换为该颜色图片
+
+ @param color 颜色
+ @return 对应颜色图片
+ */
+- (UIImage *)imageWithColor:(UIColor *)color;
+
+
+
+
 @end
