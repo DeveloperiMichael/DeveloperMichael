@@ -70,6 +70,21 @@
     }
 }
 
+//其实就是在这个方法里为cell添加了一个动画效果
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CATransform3D transform = CATransform3DIdentity;
+    transform = CATransform3DRotate(transform, 0, 0, 0, 1);//渐变
+    transform = CATransform3DTranslate(transform, 0, -100, 0);//左边水平移动
+    transform = CATransform3DScale(transform, 0, 0, 0);//由小变大
+    cell.layer.transform = transform;
+    cell.layer.opacity = 0.0;
+    [UIView animateWithDuration:0.6 animations:^{
+        cell.layer.transform = CATransform3DIdentity;
+        cell.layer.opacity = 1;
+    }];
+}
+
 #pragma mark-
 #pragma mark- delegate
 

@@ -2356,8 +2356,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.michael.chang.DeveloperMichael;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eeaf2666-7404-4e47-a89d-45dd0b48dcb5";
-				PROVISIONING_PROFILE_SPECIFIER = "XC Wildcard *";
+				PROVISIONING_PROFILE = "77f0e1f5-41af-44ef-975e-38903d34a039";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development *";
 			};
 			name = Debug;
 		};
@@ -2383,8 +2383,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.michael.chang.DeveloperMichael;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eeaf2666-7404-4e47-a89d-45dd0b48dcb5";
-				PROVISIONING_PROFILE_SPECIFIER = "XC Wildcard *";
+				PROVISIONING_PROFILE = "77f0e1f5-41af-44ef-975e-38903d34a039";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development *";
 			};
 			name = Release;
 		};
