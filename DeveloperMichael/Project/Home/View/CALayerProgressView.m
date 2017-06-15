@@ -49,7 +49,7 @@ static const CGFloat viewLength = 80;
 - (LoadProgressView *)progressView {
     if (!_progressView) {
         _progressView = [[LoadProgressView alloc] init];
-        _progressView.backgroundColor = [UIColor clearColor];
+        _progressView.backgroundColor = [UIColor redColor];
     }
     return _progressView;
 }

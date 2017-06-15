@@ -96,23 +96,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    BaseViewController *vc;
-    switch (indexPath.row) {
-        case 0:
-            vc = [[AnimationViewController alloc] init];
-            break;
-        case 1:
-            vc = [[MultipleCollectionViewController alloc] init];
-            break;
-        case 2:
-            vc = [[MultiMaskViewController alloc] init];
-            break;
-        case 3:
-            vc = [[CalendarViewController alloc] init];
-            break;
-        default:
-            break;
-    }
+    ;
+    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"home" ofType:@"plist"];
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    
+    BaseViewController *vc = [[NSClassFromString([data objectForKey:_titleArray[indexPath.row]]) alloc] init];
+    
     vc.navigationBarTitle = _titleArray[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -142,7 +132,7 @@
 
 - (NSMutableArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType",@"UICollectionViewType",@"MultiMaskViewType",@"Calendar",@"AliPay", nil];
+        _titleArray = [[NSMutableArray alloc] initWithObjects:@"UIKeyAnimationType",@"UICollectionViewType",@"MultiMaskViewType",@"Calendar",@"AliPay",@"SAKit", nil];
     }
     return _titleArray;
 }

@@ -10,14 +10,14 @@
 
 @interface LoadProgressView : UIView
 
-///default is 2
-@property (nonatomic, assign) CGFloat progressWidth;
+/**
+ 初始化LoadProgressView
+ 
+ @param view LoadProgressView需要展示的界面
+ */
+- (instancetype)initWithShowInView:(UIView *)view withText:(NSString *)string;
 
-///default is graycolor
-@property (nonatomic, strong) UIColor *progressColor;
 
-///animation duration,default is 1.0
-@property (nonatomic, assign) CGFloat animationDuration;
 
 /**
  *  添加通知 当程序重新进入前台或活跃状态，动画仍然会执行

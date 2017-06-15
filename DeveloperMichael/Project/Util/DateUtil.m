@@ -55,7 +55,7 @@
 
 + (NSInteger)numberOfDaysInMonthWithDate:(NSDate *)date {
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSRange range = [calendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date];
+    NSRange range = [calendar rangeOfUnit:NSCalendarUnitYear inUnit:NSCalendarUnitEra forDate:date];
     NSUInteger numberOfDaysInMonth = range.length;
     return (NSInteger)numberOfDaysInMonth;
 }

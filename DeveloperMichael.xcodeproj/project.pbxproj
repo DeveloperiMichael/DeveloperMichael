@@ -211,6 +211,10 @@
 		ABBD7C651EAF2EF4001ED00B /* TanTanCardSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBD7C641EAF2EF4001ED00B /* TanTanCardSlideViewController.m */; };
 		ABBD7C681EAF3358001ED00B /* TanTanCardSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBD7C671EAF3358001ED00B /* TanTanCardSlideView.m */; };
 		ABBD7C6B1EAF4B26001ED00B /* UserInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBD7C6A1EAF4B26001ED00B /* UserInfoObject.m */; };
+		ABE5334F1EF2193B0005F422 /* home.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABE5334E1EF2193B0005F422 /* home.plist */; };
+		ABE533541EF2294A0005F422 /* SAKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE533531EF2294A0005F422 /* SAKitViewController.m */; };
+		ABE533571EF229720005F422 /* SAKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE533561EF229720005F422 /* SAKitView.m */; };
+		ABE5335B1EF22DDB0005F422 /* SALoadingHUDAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE5335A1EF22DDB0005F422 /* SALoadingHUDAccessory.m */; };
 		B204B32D1E68599A009A5936 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B204B32C1E68599A009A5936 /* LoginView.m */; };
 		B204B3301E685C2B009A5936 /* LoginTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = B204B32F1E685C2B009A5936 /* LoginTextFieldView.m */; };
 		B204B3351E6863A5009A5936 /* UIView+ViewFrameGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = B204B3341E6863A5009A5936 /* UIView+ViewFrameGeometry.m */; };
@@ -586,6 +590,14 @@
 		ABBD7C671EAF3358001ED00B /* TanTanCardSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TanTanCardSlideView.m; sourceTree = "<group>"; };
 		ABBD7C691EAF4B26001ED00B /* UserInfoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoObject.h; sourceTree = "<group>"; };
 		ABBD7C6A1EAF4B26001ED00B /* UserInfoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoObject.m; sourceTree = "<group>"; };
+		ABE5334E1EF2193B0005F422 /* home.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = home.plist; path = ../TabBarController/Controller/home.plist; sourceTree = "<group>"; };
+		ABE533521EF2294A0005F422 /* SAKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAKitViewController.h; sourceTree = "<group>"; };
+		ABE533531EF2294A0005F422 /* SAKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAKitViewController.m; sourceTree = "<group>"; };
+		ABE533551EF229720005F422 /* SAKitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAKitView.h; sourceTree = "<group>"; };
+		ABE533561EF229720005F422 /* SAKitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAKitView.m; sourceTree = "<group>"; };
+		ABE533591EF22DDB0005F422 /* SALoadingHUDAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SALoadingHUDAccessory.h; sourceTree = "<group>"; };
+		ABE5335A1EF22DDB0005F422 /* SALoadingHUDAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SALoadingHUDAccessory.m; sourceTree = "<group>"; };
+		ABE5335C1EF2364C0005F422 /* SANetworkAccessoryProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SANetworkAccessoryProtocol.h; sourceTree = "<group>"; };
 		B204B32B1E68599A009A5936 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = DeveloperMichael/Project/LoginViewController/View/LoginView.h; sourceTree = SOURCE_ROOT; };
 		B204B32C1E68599A009A5936 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginView.m; path = DeveloperMichael/Project/LoginViewController/View/LoginView.m; sourceTree = SOURCE_ROOT; };
 		B204B32E1E685C2B009A5936 /* LoginTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginTextFieldView.h; path = DeveloperMichael/Project/LoginViewController/View/LoginTextFieldView.h; sourceTree = SOURCE_ROOT; };
@@ -778,6 +790,7 @@
 		AB730C0F1E7A6D3900D42FD9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				ABE5334E1EF2193B0005F422 /* home.plist */,
 				AB730C101E7A6D3900D42FD9 /* Controller */,
 				AB730C111E7A6D3900D42FD9 /* Data */,
 				AB730C121E7A6D3900D42FD9 /* Model */,
@@ -789,6 +802,7 @@
 		AB730C101E7A6D3900D42FD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ABE533511EF226290005F422 /* SAKit */,
 				AB8442291EC3F91B00535669 /* Payment */,
 				AB8441911EC04D7600535669 /* Calendar */,
 				AB557CA91EB06A9500D01C32 /* MaskViewController */,
@@ -817,6 +831,7 @@
 		AB730C131E7A6D3900D42FD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABE533581EF2297D0005F422 /* SAKit */,
 				AB84419B1EC050F700535669 /* CalendarView */,
 				AB557CA81EB06A2C00D01C32 /* MaskView */,
 				AB9600B61EA99F40008FAB13 /* CollectionView */,
@@ -1409,6 +1424,27 @@
 			path = BootAnimation;
 			sourceTree = "<group>";
 		};
+		ABE533511EF226290005F422 /* SAKit */ = {
+			isa = PBXGroup;
+			children = (
+				ABE533521EF2294A0005F422 /* SAKitViewController.h */,
+				ABE533531EF2294A0005F422 /* SAKitViewController.m */,
+				ABE533591EF22DDB0005F422 /* SALoadingHUDAccessory.h */,
+				ABE5335A1EF22DDB0005F422 /* SALoadingHUDAccessory.m */,
+				ABE5335C1EF2364C0005F422 /* SANetworkAccessoryProtocol.h */,
+			);
+			path = SAKit;
+			sourceTree = "<group>";
+		};
+		ABE533581EF2297D0005F422 /* SAKit */ = {
+			isa = PBXGroup;
+			children = (
+				ABE533551EF229720005F422 /* SAKitView.h */,
+				ABE533561EF229720005F422 /* SAKitView.m */,
+			);
+			name = SAKit;
+			sourceTree = "<group>";
+		};
 		B204B3311E68611F009A5936 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -1488,7 +1524,7 @@
 			isa = PBXGroup;
 			children = (
 				B270E4141E6D2C66002DA883 /* ShareInstance */,
-				B249EF471E6A5514000FF15B /* Util */,
+				B249EF471E6A5514000FF15B /* Helper */,
 				B249EE531E6A54F8000FF15B /* AppLib */,
 				B249EEF71E6A54F8000FF15B /* Common */,
 				B204B3311E68611F009A5936 /* Category */,
@@ -1750,7 +1786,7 @@
 			path = SANotificationObject;
 			sourceTree = "<group>";
 		};
-		B249EF471E6A5514000FF15B /* Util */ = {
+		B249EF471E6A5514000FF15B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				B249EF4E1E6A6745000FF15B /* pinyin.c */,
@@ -1760,6 +1796,7 @@
 				AB73AAAB1E84F6FE00685A52 /* DateUtil.h */,
 				AB73AAAC1E84F6FE00685A52 /* DateUtil.m */,
 			);
+			name = Helper;
 			path = Util;
 			sourceTree = "<group>";
 		};
@@ -1985,6 +2022,7 @@
 				AB91250C1EAD93EC006D7248 /* 2.plist in Resources */,
 				AB9F3F461E9F10FD00498BB7 /* BootAnimation30.png in Resources */,
 				AB9F3F341E9F10FD00498BB7 /* BootAnimation14.png in Resources */,
+				ABE5334F1EF2193B0005F422 /* home.plist in Resources */,
 				AB91250D1EAD93EC006D7248 /* 3.plist in Resources */,
 				AB9F3F411E9F10FD00498BB7 /* BootAnimation26.png in Resources */,
 				AB9F3F5E1E9F10FD00498BB7 /* BootAnimation52.png in Resources */,
@@ -2097,6 +2135,7 @@
 				AB8441FC1EC2E84E00535669 /* UIScrollView+MJRefresh.m in Sources */,
 				AB8441941EC04DD700535669 /* CalendarViewController.m in Sources */,
 				AB8441EB1EC2E84E00535669 /* MJRefreshBackFooter.m in Sources */,
+				ABE5335B1EF22DDB0005F422 /* SALoadingHUDAccessory.m in Sources */,
 				AB9600B91EA99FFC008FAB13 /* WaterFlowCollectionViewController.m in Sources */,
 				AB730C311E7A8FD300D42FD9 /* CABasicAnimationView.m in Sources */,
 				B21322AF1E6845B1000E73CD /* LoginViewController.m in Sources */,
@@ -2173,6 +2212,7 @@
 				AB9600E71EA9E492008FAB13 /* MJMethod.m in Sources */,
 				B270E41A1E6D326F002DA883 /* TimerManagerTask.m in Sources */,
 				B2BCAC941E6FF4B900CCD217 /* PublishViewController.m in Sources */,
+				ABE533541EF2294A0005F422 /* SAKitViewController.m in Sources */,
 				AB91253E1EAD964B006D7248 /* UIImageView+WebCache.m in Sources */,
 				AB557CB21EB0731A00D01C32 /* MultiMaskView.m in Sources */,
 				AB84419A1EC050E700535669 /* CalendarContentView.m in Sources */,
@@ -2208,6 +2248,7 @@
 				B2603C441E6EDFFC00CE572A /* ImageAnimationViewController.m in Sources */,
 				AB74BAC31E9B5D2900DDF16A /* MultipleCollectionViewController.m in Sources */,
 				AB73AAB01E85146900685A52 /* DMImageBrowserViewController.m in Sources */,
+				ABE533571EF229720005F422 /* SAKitView.m in Sources */,
 				B2603C3F1E6EB3EB00CE572A /* AdvertiseViewController.m in Sources */,
 				AB9600EA1EA9E492008FAB13 /* NSObject+MJCoding.m in Sources */,
 				AB76C6901EB1BAAB0030455E /* SharedStyleView.m in Sources */,
