@@ -145,7 +145,7 @@
     CABasicAnimation *rotationAni = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAni.fromValue = @0.0;
     rotationAni.toValue = @(2 * M_PI);
-    rotationAni.duration = 3;
+    rotationAni.duration = self.animationDuration;
     rotationAni.repeatCount = MAXFLOAT;
     [self.animationView.layer addAnimation:rotationAni forKey:@"roration"];
     

@@ -8,14 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, SALoadingHUDStyle) {
-    AnimationOnlyStyle = 0,
-    AnimationWithTextStyle,
-};
-
 @interface SALoadingHUDAccessory : NSObject
 
-@property (nonatomic, assign) SALoadingHUDStyle loadingHUDStyle;
 
 /**
  初始化LoadingHUDAccessory
